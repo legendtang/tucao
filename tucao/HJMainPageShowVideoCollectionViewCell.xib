@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="HJMainPageShowVideoCollectionViewCell" id="gTV-IL-0wX" customClass="HJMainPageShowVideoCollectionViewCell" customModule="tucao" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="181"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="181"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8LW-He-esp">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="111"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加载ing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9k-ad-F29">
+                        <rect key="frame" x="2" y="121" width="124" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="播放:???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0y-W5-XML">
+                        <rect key="frame" x="10" y="161" width="40" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="弹幕:???" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-os-pC0">
+                        <rect key="frame" x="78" y="161" width="40" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="8LW-He-esp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4YD-Gg-QCx"/>
+                <constraint firstAttribute="bottom" secondItem="O0y-W5-XML" secondAttribute="bottom" constant="8" id="KjL-uB-M3V"/>
+                <constraint firstItem="d9k-ad-F29" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="R0p-Fe-vqq"/>
+                <constraint firstAttribute="trailing" secondItem="8LW-He-esp" secondAttribute="trailing" id="SI5-dc-ia4"/>
+                <constraint firstItem="d9k-ad-F29" firstAttribute="top" secondItem="8LW-He-esp" secondAttribute="bottom" constant="10" id="ZiO-rG-d2Z"/>
+                <constraint firstItem="O0y-W5-XML" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="aZD-n5-3vA"/>
+                <constraint firstAttribute="bottom" secondItem="8LW-He-esp" secondAttribute="bottom" constant="70" id="eh5-XI-fSv"/>
+                <constraint firstAttribute="trailing" secondItem="4DB-os-pC0" secondAttribute="trailing" constant="10" id="nbv-ui-wHo"/>
+                <constraint firstAttribute="trailing" secondItem="d9k-ad-F29" secondAttribute="trailing" constant="2" id="s3A-qW-fJj"/>
+                <constraint firstItem="8LW-He-esp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="voJ-xb-lO3"/>
+                <constraint firstAttribute="bottom" secondItem="4DB-os-pC0" secondAttribute="bottom" constant="8" id="yE5-ZL-tcV"/>
+            </constraints>
+            <size key="customSize" width="128" height="181"/>
+            <connections>
+                <outlet property="danmaku" destination="4DB-os-pC0" id="ZI0-0J-ban"/>
+                <outlet property="image" destination="8LW-He-esp" id="yFp-Ec-GV1"/>
+                <outlet property="playCount" destination="O0y-W5-XML" id="cga-Ue-hxk"/>
+                <outlet property="videoTitle" destination="d9k-ad-F29" id="rWy-8B-hkF"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="124.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

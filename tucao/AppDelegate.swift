@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        KingfisherManager.shared.downloader.downloadTimeout=5       
+        UINavigationBar.appearance().tintColor=UIColor.white
+        UINavigationBar.appearance().backgroundColor=UIColor.blue
+//          UINavigationBar.appearance().ba navigationBar.barStyle = UIBarStyle.BlackOpaque;
+        KingfisherManager.shared.cache.maxMemoryCost=UInt(10*1024*1024)
+        KingfisherManager.shared.cache.maxDiskCacheSize=UInt(10*1024*1024)
+     
+        let  userDefaults:UserDefaults = UserDefaults.standard
+
+        if !UserDefaults.standard.bool(forKey: "firstStart")
+        {
+            UserDefaults.standard.set(true, forKey: "firstStart")
+            userDefaults.set(40, forKey: "maxDanmakuCount")
+            userDefaults.set(1, forKey: "DanmakuTransparent")
+            userDefaults.set(5.0, forKey: "DanmakuSpeed")
+            userDefaults.synchronize()
+        }
         return true
     }
 
