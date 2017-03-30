@@ -7,10 +7,6 @@
 >如果说之前做的那个哔卡(已经废掉)是自娱自乐的话，那么这次这个c站的客户端就是为了以后简历可以多写点东西而写的了，acg圈里有句话叫“b站看弹幕，c站看福利，里番看琉璃”，确实c站的地位比较尴尬，属于小众网站，但正是如此，他才能看到很多别的地方看不到的东西～
 当然这个客户端不是官方，依然还是我自己做的，如c站方面有任何异议，这项目便作废～
 至于为什么用swift嘛～并不是因为我不会oc，其实比起oc我更不会swift，只是单纯的对swift的尝试？？？
-
-
-# 项目地址
-Github：https://github.com/freedomstar/tucao
 附带一下项目中用的弹幕框架地址(我写的框架)：https://github.com/freedomstar/MagicMasterDanmaku
 框架还不完善，但基本能用（readme.md都没写orz，等框架完善会写写相关的文章）
 
@@ -27,7 +23,7 @@ Github：https://github.com/freedomstar/tucao
 ![主界面](http://upload-images.jianshu.io/upload_images/1781300-b85c5f54bf824cfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 子类列表
-子类列表可以按条件排序，也可以将侧边栏收起
+#### 子类列表可以按条件排序，也可以将侧边栏收起
 ![收起](http://upload-images.jianshu.io/upload_images/1781300-46b456a61368e140.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
