@@ -13,14 +13,14 @@
 # 项目预览
 ### 主界面
 
-![](http://upload-images.jianshu.io/upload_images/1781300-e4f8e93e2c7ea74b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://github.com/freedomstar/tucao/blob/master/photo/1781300-e4f8e93e2c7ea74b.png)
 
 
 
-![](http://upload-images.jianshu.io/upload_images/1781300-fedcacd79bb70d31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://github.com/freedomstar/tucao/blob/master/photo/1781300-fedcacd79bb70d31.png)
 
 
-![](http://upload-images.jianshu.io/upload_images/1781300-b85c5f54bf824cfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://github.com/freedomstar/tucao/blob/master/photo/1781300-b85c5f54bf824cfa.png)
 
 ### 子类列表
 #### 子类列表可以按条件排序，也可以将侧边栏收起
@@ -31,14 +31,14 @@
 
 ### 播放界面
 
-![](http://upload-images.jianshu.io/upload_images/1781300-9f16b4374ac21663.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://github.com/freedomstar/tucao/blob/master/photo/1781300-9f16b4374ac21663.png)
 
 
-![](http://upload-images.jianshu.io/upload_images/1781300-4bf9fef8ce1f5979.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://github.com/freedomstar/tucao/blob/master/photo/1781300-4bf9fef8ce1f5979.png)
 
 ### 实际弹幕与播放效果
 
-![](http://upload-images.jianshu.io/upload_images/1781300-7eb2c2b2e5264ded.gif?imageMogr2/auto-orient/strip)
+![](https://github.com/freedomstar/tucao/blob/master/photo/1781300-7eb2c2b2e5264ded.gif)
 
 还有搜索等等界面就不展示了
 
