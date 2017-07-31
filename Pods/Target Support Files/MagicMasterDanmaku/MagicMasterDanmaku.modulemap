@@ -1,0 +1,6 @@
+framework module MagicMasterDanmaku {
+  umbrella header "MagicMasterDanmaku-umbrella.h"
+
+  export *
+  module * { export * }
+}

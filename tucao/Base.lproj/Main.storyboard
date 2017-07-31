@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xgv-Xi-F4y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xgv-Xi-F4y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -730,7 +731,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-uf-rey">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">tucao 开源组件说明
+                                <string key="text">tucao 开源组件说明
 
 -------------------------------
 Alamofire
@@ -789,7 +790,7 @@ https://github.com/CoderMJLee/MJRefresh
 
 Copyright (c) 2013-2015 MJRefresh (https://github.com/CoderMJLee/MJRefresh)
 
-Licensed under MIT license</mutableString>
+Licensed under MIT license</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -860,7 +861,7 @@ Licensed under MIT license</mutableString>
                                 <rect key="frame" x="0.0" y="116" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kgi-2N-aMI" id="bAN-oa-pv9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-wS-2g1">
@@ -1259,7 +1260,7 @@ Licensed under MIT license</mutableString>
                                         <rect key="frame" x="0.0" y="28" width="284" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="moL-3N-adL" id="SfU-5P-9bS">
-                                            <rect key="frame" x="0.0" y="0.0" width="284" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="284" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8oz-TR-ciJ">
@@ -2029,16 +2030,16 @@ Licensed under MIT license</mutableString>
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="200" height="200"/>
-        <image name="danmaku" width="160" height="134"/>
-        <image name="danmakuW" width="481" height="403"/>
-        <image name="download" width="200" height="184"/>
-        <image name="downloadW" width="200" height="184"/>
-        <image name="fullscreen" width="73" height="73"/>
-        <image name="history" width="200" height="190"/>
+        <image name="back" width="67" height="67"/>
+        <image name="danmaku" width="54" height="45"/>
+        <image name="danmakuW" width="160" height="134"/>
+        <image name="download" width="67" height="61"/>
+        <image name="downloadW" width="67" height="61"/>
+        <image name="fullscreen" width="25" height="25"/>
+        <image name="history" width="67" height="63"/>
         <image name="music.png" width="154" height="167"/>
         <image name="play.png" width="512" height="512"/>
-        <image name="setup2" width="200" height="200"/>
+        <image name="setup2" width="67" height="67"/>
         <image name="usericon.jpg" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2678cfe1-799f-4f50-9934-811015c52b71" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/acgmusic.imageset/acgmusic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/animation.imageset/animation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/back.imageset/back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/bule.imageset/bule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/chinese.imageset/chinese.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/dance.imageset/dance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/danmaku.imageset/danmaku.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/danmakuW.imageset/danmakuW.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/download.imageset/download.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/downloadW.imageset/downloadW.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/dub.imageset/dub.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/esports.imageset/esports.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/film.imageset/film.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/finshed.imageset/finshed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/fullscreen.imageset/fullscreen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/game.imageset/game.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/gameboy.imageset/gameboy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/gmv.imageset/gmv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/history.imageset/history.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/instrument.imageset/instrument.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/live.imageset/live.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/loading.imageset/loading.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/mad.imageset/mad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/military.imageset/military.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/mmd.imageset/mmd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/music.imageset/music.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/networkgame.imageset/networkgame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/newfan.imageset/newfan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/other.imageset/other.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/otomad.imageset/otomad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/ova.imageset/ova.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/pet.imageset/pet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/setup.imageset/setup.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/setup2.imageset/setup2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/sing.imageset/sing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/sologame.imageset/sologame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/sports.imageset/sports.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/technology.imageset/technology.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/television.imageset/television.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/televisionamuse.imageset/televisionamuse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/tv.imageset/tv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/vocaloid.imageset/vocaloid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/xiwenlejian.imageset/xiwenlejian.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/MJRefresh.bundle/arrow@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/acgmusic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/animation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/bule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/bule2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/chinese.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/dance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/danmaku.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/danmakuW.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/download.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/downloadW.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/dub.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/esports.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/film.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/finshed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/fullscreen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/game.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/gameboy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/gmv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/history.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/instrument.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/live.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/loading.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/mad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/military.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/mmd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/music.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/networkgame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/newfan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/oop.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/other.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/otomad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/ova.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/pet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/setup.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/setup2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/sing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/sologame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/sports.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/technology.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/television.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/televisionamuse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/tv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/usericon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/vocaloid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/xiwenlejian.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/acgmusic.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/animation.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/back.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/bule.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/chinese.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/dance.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/danmaku-1.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/danmaku.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/danmakuW.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/download.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/downloadW.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/dub.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/esports.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/film.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/finshed.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/fullscreen.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/game.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/gameboy.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/gmv.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/history.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/instrument.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/live.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/loading.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/mad.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/military.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/mmd.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/music.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/networkgame.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/newfan.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/oop.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/other.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/otomad.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/ova.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/pet.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/setup.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/setup2.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/sing.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/sologame.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/sports.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/technology.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/television.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/televisionamuse.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/tv.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/usericon.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/vocaloid.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/xiwenlejian.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/ClassifyList.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJAdvertisementViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJAdvertisementViewController.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJChildListViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJClassifyCellCollectionViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJClassifyTableViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJClassifyTableViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJCommentModel.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJCommentTableViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJDanmakusetupTableViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJFullPlayViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJMainPageShowVideoCollectionViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJMainPageShowVideoCollectionViewCell.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJMainPageShowVideoTableViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJMainPageShowVideoViewController.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJNavigationViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJOpenSourceViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJPlayViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJVedioListModle.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJVedioMessageModle.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJVideoListTableViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJdrawViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJplaySetupTableViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJsearchTableViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJsearchTableViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJsetupTableViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/HJvideoListCollectionViewCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/Header.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshAutoFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshAutoFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshBackFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshBackFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshComponent.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshComponent.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshHeader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Base/MJRefreshHeader.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Header/MJRefreshGifHeader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Header/MJRefreshGifHeader.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Header/MJRefreshNormalHeader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Header/MJRefreshNormalHeader.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Header/MJRefreshStateHeader.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/Custom/Header/MJRefreshStateHeader.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/MJRefresh.bundle/en.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/MJRefresh.bundle/zh-Hans.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/MJRefresh.bundle/zh-Hant.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/MJRefresh.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/MJRefreshConst.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/MJRefreshConst.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/NSBundle+MJRefresh.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/NSBundle+MJRefresh.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/UIScrollView+MJExtension.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/UIScrollView+MJExtension.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/UIScrollView+MJRefresh.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/UIScrollView+MJRefresh.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/UIView+MJExtension.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MJRefresh/UIView+MJExtension.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/MainPageViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tucao/fullViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tucao.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/tucao.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tucao.xcodeproj/xcuserdata/huizai.xcuserdatad/xcschemes/tucao.xcscheme" afterPath="$PROJECT_DIR$/tucao.xcodeproj/xcuserdata/huizai.xcuserdatad/xcschemes/tucao.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tucao/AppDelegate.swift" afterPath="$PROJECT_DIR$/tucao/AppDelegate.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tucao/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="$PROJECT_DIR$/tucao/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tucao/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/tucao/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tucao/Info.plist" afterPath="$PROJECT_DIR$/tucao/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tucao/ViewController.swift" afterPath="$PROJECT_DIR$/tucao/ViewController.swift" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="HJplaySetupTableViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tucao/HJplaySetupTableViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-50">
+              <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HJChildListViewController.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tucao/HJChildListViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1141">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1920" />
+    <option name="height" value="1002" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainPage" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainPage" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classify" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainPage" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classify" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildListView" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tucao" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainPage" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classify" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildListView" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.tucao">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="tucao" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tucao" TARGET_NAME="tucao" CONFIG_NAME="Debug" SCHEME_NAME="tucao" RUN_TARGET_PROJECT_NAME="tucao" RUN_TARGET_NAME="tucao" MAKE_ACTIVE="TRUE">
+      <envs>
+        <env name="OS_ACTIVITY_MODE" value="disable" />
+      </envs>
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="MagicMasterDanmaku" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MagicMasterDanmaku" TARGET_NAME="MagicMasterDanmaku" CONFIG_NAME="Release" SCHEME_NAME="MagicMasterDanmaku" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="IJKMediaFramework" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="IJKMediaPlayer" TARGET_NAME="IJKMediaFramework" CONFIG_NAME="Debug" SCHEME_NAME="IJKMediaFramework" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="demo" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MagicMasterDanmaku" TARGET_NAME="demo" CONFIG_NAME="Debug" SCHEME_NAME="demo" RUN_TARGET_PROJECT_NAME="MagicMasterDanmaku" RUN_TARGET_NAME="demo" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Kingfisher-Demo" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Kingfisher" TARGET_NAME="Kingfisher-Demo" CONFIG_NAME="Debug" SCHEME_NAME="Kingfisher-Demo" RUN_TARGET_PROJECT_NAME="Kingfisher" RUN_TARGET_NAME="Kingfisher-Demo" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Kingfisher-tvOS-Demo" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Kingfisher" TARGET_NAME="Kingfisher-tvOS-Demo" CONFIG_NAME="Debug" SCHEME_NAME="Kingfisher-tvOS-Demo" RUN_TARGET_PROJECT_NAME="Kingfisher" RUN_TARGET_NAME="Kingfisher-tvOS-Demo" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Kingfisher-macOS-Demo" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Kingfisher" TARGET_NAME="Kingfisher-macOS-Demo" CONFIG_NAME="Debug" SCHEME_NAME="Kingfisher-macOS-Demo" RUN_TARGET_PROJECT_NAME="Kingfisher" RUN_TARGET_NAME="Kingfisher-macOS-Demo" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Kingfisher-watchOS-Demo" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Kingfisher" TARGET_NAME="Kingfisher-watchOS-Demo" CONFIG_NAME="Debug" SCHEME_NAME="Kingfisher-watchOS-Demo" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="22">
+      <item index="0" class="java.lang.String" itemvalue="Application.tucao" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MagicMasterDanmaku" />
+      <item index="2" class="java.lang.String" itemvalue="Application.IJKMediaFramework" />
+      <item index="3" class="java.lang.String" itemvalue="Application.demo" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Alamofire iOS" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Alamofire macOS" />
+      <item index="6" class="java.lang.String" itemvalue="Application.Alamofire tvOS" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Alamofire watchOS" />
+      <item index="8" class="java.lang.String" itemvalue="Application.Cleanup Whitespace" />
+      <item index="9" class="java.lang.String" itemvalue="Application.Kingfisher" />
+      <item index="10" class="java.lang.String" itemvalue="Application.Kingfisher-macOS" />
+      <item index="11" class="java.lang.String" itemvalue="Application.Kingfisher-tvOS" />
+      <item index="12" class="java.lang.String" itemvalue="Application.Kingfisher-watchOS" />
+      <item index="13" class="java.lang.String" itemvalue="Application.Kingfisher-Demo" />
+      <item index="14" class="java.lang.String" itemvalue="Application.Kingfisher-tvOS-Demo" />
+      <item index="15" class="java.lang.String" itemvalue="Application.Kingfisher-macOS-Demo" />
+      <item index="16" class="java.lang.String" itemvalue="Application.Kingfisher-watchOS-Demo" />
+      <item index="17" class="java.lang.String" itemvalue="Application.SwiftyJSON iOS" />
+      <item index="18" class="java.lang.String" itemvalue="Application.SwiftyJSON OSX" />
+      <item index="19" class="java.lang.String" itemvalue="Application.SwiftyJSON tvOS" />
+      <item index="20" class="java.lang.String" itemvalue="Application.SwiftyJSON watchOS" />
+      <item index="21" class="java.lang.String" itemvalue="Application.KYDrawerController" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2678cfe1-799f-4f50-9934-811015c52b71" name="Default" comment="" />
+      <created>1490840503365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1490840503365</updated>
+      <workItem from="1490840506358" duration="140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="140000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1920" height="1002" extended-state="6" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tucao/HJplaySetupTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tucao/HJChildListViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1141">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

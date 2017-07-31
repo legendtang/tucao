@@ -89,6 +89,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
     
     override func viewWillAppear(_ animated: Bool)
     {
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled=true
         self.navigationController?.navigationBar.isHidden=false
         playerView?.frame=CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height:playView.frame.size.height);
         Danmaku?.changeViewFrame(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: (playerView?.frame.size.height)!))
@@ -163,6 +164,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.IJKMPMoviePlayerPlaybackDidFinish), name:  NSNotification.Name.init(rawValue: "IJKMPMoviePlayerPlaybackDidFinishNotification"), object: nil)
         
+        print(dic);
         setURL(vid: dic.object(forKey: "vid") as! String)
         playLable.text="播放:"+play!
         userlable.text="up:"+user!

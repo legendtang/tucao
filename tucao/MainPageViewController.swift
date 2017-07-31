@@ -16,12 +16,24 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
     @IBOutlet weak var openDrawButton: UIButton!
     @IBOutlet weak var titleScrollView: UIScrollView!
     @IBOutlet weak var mainScrollView: UIScrollView!
+    var vc:KYDrawerController?
     var beSelectedButton:UIButton?
     let titleButtonWidth:CGFloat = 70.0
     var titleSelectView:UIView?
     var titleButtonArray:[UIButton]?=[]
     var VCArray:[HJClassifyTableViewController]?
     var nowpage:Int?=0
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        vc?.screenEdgePanGestureEnabled=true;
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated);
+        vc?.screenEdgePanGestureEnabled=false;
+    }
 
     
     override func viewDidLoad()
@@ -32,6 +44,7 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
 
     func setUp()
     {
+        vc=self.navigationController?.parent as? KYDrawerController
 //        self.navigationController?.navigationBar.backgroundColor=UIColor.blue
         self.navigationController?.navigationBar.isTranslucent=false
         self.navigationController?.navigationBar.backgroundColor=UIColor.blue
@@ -183,8 +196,7 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
 
     @IBAction func opendrawview(_ sender: Any)
     {
-        let vc:KYDrawerController=self.navigationController?.parent as! KYDrawerController
-        vc.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
+        vc?.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
     }
     
     override func didReceiveMemoryWarning()

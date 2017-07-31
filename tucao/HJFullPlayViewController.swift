@@ -43,6 +43,7 @@ class HJFullPlayViewController: UIViewController
     
     override func viewWillAppear(_ animated: Bool)
     {
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled=false
         toolTitle.text=Bigtitle
         self.navigationController?.navigationBar.isHidden=true
         timer = Timer.scheduledTimer(timeInterval: 1,
