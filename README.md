@@ -1,12 +1,12 @@
-#2017.7.31更新
-1.修复在播放页面触发屏幕边缘右滑手势时弹出侧边栏
-2.修复在横屏播放页面触发屏幕边缘右滑手势时屏幕变为竖屏
-3.第三方库改为cocoapods管理，除了ijkplayer 和 MJRefresh
+# 2017.7.31更新
+ 1. 修复在播放页面触发屏幕边缘右滑手势时弹出侧边栏
+ 2. 修复在横屏播放页面触发屏幕边缘右滑手势时屏幕变为竖屏
+ 3. 第三方库改为cocoapods管理，除了ijkplayer 和 MJRefresh
 
 预计下版本加入
-1.支持更多源头的视频（至少支持youku源）
-2.离线缓存
-3.改进MagicMasterDanmaku
+ 1. 支持更多源头的视频（至少支持youku源）
+ 2. 离线缓存
+ 3. 改进MagicMasterDanmaku
 
 # tucao
 自制c站app
