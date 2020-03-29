@@ -94,20 +94,7 @@
 		395F8AE01DCD7113005703D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8ADF1DCD7113005703D9 /* QuartzCore.framework */; };
 		395F8AE21DCD711A005703D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8AE11DCD711A005703D9 /* UIKit.framework */; };
 		395F8AE41DCD7124005703D9 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8AE31DCD7124005703D9 /* VideoToolbox.framework */; };
-		396D3A8D1F2F7B0F00B3A4FC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A8C1F2F7B0F00B3A4FC /* Alamofire.framework */; };
-		396D3A8E1F2F7B0F00B3A4FC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A8C1F2F7B0F00B3A4FC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		396D3A901F2F7B0F00B3A4FC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A8F1F2F7B0F00B3A4FC /* Kingfisher.framework */; };
-		396D3A911F2F7B0F00B3A4FC /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A8F1F2F7B0F00B3A4FC /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		396D3A931F2F7B0F00B3A4FC /* KYDrawerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A921F2F7B0F00B3A4FC /* KYDrawerController.framework */; };
-		396D3A941F2F7B0F00B3A4FC /* KYDrawerController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A921F2F7B0F00B3A4FC /* KYDrawerController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		396D3A961F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A951F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework */; };
-		396D3A971F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A951F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		396D3A991F2F7B0F00B3A4FC /* Pods_tucao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A981F2F7B0F00B3A4FC /* Pods_tucao.framework */; };
-		396D3A9A1F2F7B0F00B3A4FC /* Pods_tucao.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A981F2F7B0F00B3A4FC /* Pods_tucao.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		396D3A9C1F2F7B0F00B3A4FC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A9B1F2F7B0F00B3A4FC /* SwiftyJSON.framework */; };
-		396D3A9D1F2F7B0F00B3A4FC /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 396D3A9B1F2F7B0F00B3A4FC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		396D3A9F1F2F7B6C00B3A4FC /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3983CE4D1F2F739900E66DEA /* IJKMediaFramework.framework */; };
-		396D3AA01F2F7B7000B3A4FC /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3983CE4D1F2F739900E66DEA /* IJKMediaFramework.framework */; };
 		396D3AA11F2F7B7000B3A4FC /* IJKMediaFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3983CE4D1F2F739900E66DEA /* IJKMediaFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		397DDDB71DE52D5C00E0EC3A /* setup.png in Resources */ = {isa = PBXBuildFile; fileRef = 397DDDB61DE52D5C00E0EC3A /* setup.png */; };
 		397DDDB91DE52DE500E0EC3A /* usericon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 397DDDB81DE52DE500E0EC3A /* usericon.jpg */; };
@@ -192,6 +179,55 @@
 			remoteGlobalIDString = E654EA941B6B27E600B0F2D0;
 			remoteInfo = IJKMediaFrameworkTests;
 		};
+		473FBBAC2430EBF2006949D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E49D6D248DD1CEE584E6776B9164A1B2;
+			remoteInfo = MJRefresh;
+		};
+		47BF3511242DC8D700E4C0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D797E9A5C5782CE845840781FA1CC81;
+			remoteInfo = Alamofire;
+		};
+		47BF3513242DC8D700E4C0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3F44C782D64D7EB20B61CE3844EBFAD;
+			remoteInfo = Kingfisher;
+		};
+		47BF3515242DC8D700E4C0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D433130E5270B10F1A4A124AB2A965DF;
+			remoteInfo = KYDrawerController;
+		};
+		47BF3517242DC8D700E4C0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3461D1D1A9BC605BA97CDE431B118283;
+			remoteInfo = MagicMasterDanmaku;
+		};
+		47BF3519242DC8D700E4C0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2080A5ABE9B4E54EE6BA5E495FB3A36;
+			remoteInfo = "Pods-tucao";
+		};
+		47BF351B242DC8D700E4C0B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E23C076BA70925415F490FEDB215DA92;
+			remoteInfo = SwiftyJSON;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -201,12 +237,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				396D3A911F2F7B0F00B3A4FC /* Kingfisher.framework in Embed Frameworks */,
-				396D3A8E1F2F7B0F00B3A4FC /* Alamofire.framework in Embed Frameworks */,
-				396D3A9D1F2F7B0F00B3A4FC /* SwiftyJSON.framework in Embed Frameworks */,
-				396D3A971F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework in Embed Frameworks */,
-				396D3A941F2F7B0F00B3A4FC /* KYDrawerController.framework in Embed Frameworks */,
-				396D3A9A1F2F7B0F00B3A4FC /* Pods_tucao.framework in Embed Frameworks */,
 				396D3AA11F2F7B7000B3A4FC /* IJKMediaFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -332,12 +362,6 @@
 		395F8ADF1DCD7113005703D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		395F8AE11DCD711A005703D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		395F8AE31DCD7124005703D9 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		396D3A8C1F2F7B0F00B3A4FC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		396D3A8F1F2F7B0F00B3A4FC /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		396D3A921F2F7B0F00B3A4FC /* KYDrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KYDrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		396D3A951F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MagicMasterDanmaku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		396D3A981F2F7B0F00B3A4FC /* Pods_tucao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_tucao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		396D3A9B1F2F7B0F00B3A4FC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		397DDDB61DE52D5C00E0EC3A /* setup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setup.png; sourceTree = "<group>"; };
 		397DDDB81DE52DE500E0EC3A /* usericon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = usericon.jpg; sourceTree = "<group>"; };
 		397E45061DFFB6E000E12F36 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -369,6 +393,7 @@
 		39F9E8ED1DE4885900E3E259 /* danmakuW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = danmakuW.png; sourceTree = "<group>"; };
 		39F9E90A1DE494C700E3E259 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		39FA44FB1DDB040B0063FE54 /* HJNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNavigationViewController.swift; sourceTree = "<group>"; };
+		47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		9257F60D74478665F3937003 /* Pods-tucao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tucao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tucao/Pods-tucao.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0FFAAD4FF79D56ED0DE5E2 /* Pods-tucao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tucao.release.xcconfig"; path = "Pods/Target Support Files/Pods-tucao/Pods-tucao.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -383,22 +408,15 @@
 				395F8AE21DCD711A005703D9 /* UIKit.framework in Frameworks */,
 				395F8AE01DCD7113005703D9 /* QuartzCore.framework in Frameworks */,
 				395F8ADE1DCD7109005703D9 /* OpenGLES.framework in Frameworks */,
-				396D3AA01F2F7B7000B3A4FC /* IJKMediaFramework.framework in Frameworks */,
-				396D3A9C1F2F7B0F00B3A4FC /* SwiftyJSON.framework in Frameworks */,
 				395F8ADB1DCD7101005703D9 /* MediaPlayer.framework in Frameworks */,
 				395F8ADC1DCD7101005703D9 /* MobileCoreServices.framework in Frameworks */,
 				395F8AD61DCD70E1005703D9 /* CoreGraphics.framework in Frameworks */,
 				395F8AD71DCD70E1005703D9 /* CoreMedia.framework in Frameworks */,
 				395F8AD81DCD70E1005703D9 /* CoreVideo.framework in Frameworks */,
-				396D3A931F2F7B0F00B3A4FC /* KYDrawerController.framework in Frameworks */,
-				396D3A961F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework in Frameworks */,
 				395F8AD21DCD70C0005703D9 /* AVFoundation.framework in Frameworks */,
-				396D3A901F2F7B0F00B3A4FC /* Kingfisher.framework in Frameworks */,
 				395F8AD01DCD70B7005703D9 /* AudioToolbox.framework in Frameworks */,
 				395F8ACE1DCD70AB005703D9 /* libbz2.tbd in Frameworks */,
 				395F8ACC1DCD7098005703D9 /* libz.tbd in Frameworks */,
-				396D3A8D1F2F7B0F00B3A4FC /* Alamofire.framework in Frameworks */,
-				396D3A991F2F7B0F00B3A4FC /* Pods_tucao.framework in Frameworks */,
 				3983CE501F2F743200E66DEA /* Pods_tucao.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,12 +666,7 @@
 		395F8A0C1DCCA515005703D9 = {
 			isa = PBXGroup;
 			children = (
-				396D3A9B1F2F7B0F00B3A4FC /* SwiftyJSON.framework */,
-				396D3A981F2F7B0F00B3A4FC /* Pods_tucao.framework */,
-				396D3A951F2F7B0F00B3A4FC /* MagicMasterDanmaku.framework */,
-				396D3A921F2F7B0F00B3A4FC /* KYDrawerController.framework */,
-				396D3A8F1F2F7B0F00B3A4FC /* Kingfisher.framework */,
-				396D3A8C1F2F7B0F00B3A4FC /* Alamofire.framework */,
+				47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */,
 				395F8A171DCCA515005703D9 /* tucao */,
 				395F8A2C1DCCA515005703D9 /* tucaoTests */,
 				395F8A371DCCA515005703D9 /* tucaoUITests */,
@@ -968,6 +981,20 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		47BF3509242DC8D700E4C0B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47BF3512242DC8D700E4C0B7 /* Alamofire.framework */,
+				47BF3514242DC8D700E4C0B7 /* Kingfisher.framework */,
+				47BF3516242DC8D700E4C0B7 /* KYDrawerController.framework */,
+				47BF3518242DC8D700E4C0B7 /* MagicMasterDanmaku.framework */,
+				473FBBAD2430EBF2006949D7 /* MJRefresh.framework */,
+				47BF351A242DC8D700E4C0B7 /* Pods_tucao.framework */,
+				47BF351C242DC8D700E4C0B7 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -980,7 +1007,6 @@
 				395F8A121DCCA515005703D9 /* Frameworks */,
 				395F8A131DCCA515005703D9 /* Resources */,
 				C0D533558DB20D4FD9FBB045 /* [CP] Embed Pods Frameworks */,
-				849889694DC72B9C75B0B037 /* [CP] Copy Pods Resources */,
 				396D3A9E1F2F7B0F00B3A4FC /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -1037,12 +1063,12 @@
 			attributes = {
 				CLASSPREFIX = HJ;
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "辉仔";
 				TargetAttributes = {
 					395F8A141DCCA515005703D9 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 9ZHS9H5Z29;
+						DevelopmentTeam = 9975VG746Y;
 						ProvisioningStyle = Automatic;
 					};
 					395F8A281DCCA515005703D9 = {
@@ -1078,6 +1104,10 @@
 				{
 					ProductGroup = 395F8AE61DCD78BB005703D9 /* Products */;
 					ProjectRef = 395F8ABE1DCD7034005703D9 /* IJKMediaPlayer.xcodeproj */;
+				},
+				{
+					ProductGroup = 47BF3509242DC8D700E4C0B7 /* Products */;
+					ProjectRef = 47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1116,6 +1146,55 @@
 			fileType = wrapper.cfbundle;
 			path = IJKMediaFrameworkTests.xctest;
 			remoteRef = 3983CE4E1F2F739900E66DEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		473FBBAD2430EBF2006949D7 /* MJRefresh.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MJRefresh.framework;
+			remoteRef = 473FBBAC2430EBF2006949D7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47BF3512242DC8D700E4C0B7 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 47BF3511242DC8D700E4C0B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47BF3514242DC8D700E4C0B7 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 47BF3513242DC8D700E4C0B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47BF3516242DC8D700E4C0B7 /* KYDrawerController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KYDrawerController.framework;
+			remoteRef = 47BF3515242DC8D700E4C0B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47BF3518242DC8D700E4C0B7 /* MagicMasterDanmaku.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MagicMasterDanmaku.framework;
+			remoteRef = 47BF3517242DC8D700E4C0B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47BF351A242DC8D700E4C0B7 /* Pods_tucao.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_tucao.framework;
+			remoteRef = 47BF3519242DC8D700E4C0B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47BF351C242DC8D700E4C0B7 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 47BF351B242DC8D700E4C0B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1201,49 +1280,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		849889694DC72B9C75B0B037 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tucao/Pods-tucao-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		95C5505A6383D986FD133A6C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tucao-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C0D533558DB20D4FD9FBB045 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tucao/Pods-tucao-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MagicMasterDanmaku/MagicMasterDanmaku.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicMasterDanmaku.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tucao/Pods-tucao-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tucao/Pods-tucao-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1362,20 +1442,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1405,7 +1495,10 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 			};
 			name = Debug;
 		};
@@ -1413,20 +1506,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1448,7 +1551,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1461,6 +1567,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1473,7 +1580,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tucao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/huizai/XcodeProjects/tucao/tucao/Header.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1486,6 +1593,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1498,7 +1606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tucao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/huizai/XcodeProjects/tucao/tucao/Header.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

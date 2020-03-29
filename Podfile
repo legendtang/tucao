@@ -7,4 +7,6 @@ pod 'Kingfisher'
 pod 'SwiftyJSON'
 pod 'MagicMasterDanmaku'
 pod 'KYDrawerController'
+pod 'ijkplayer'
+pod 'MJRefresh'
 end  

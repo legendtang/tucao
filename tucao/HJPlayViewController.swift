@@ -9,9 +9,10 @@
 import UIKit
 import IJKMediaFramework
 import MagicMasterDanmaku
-import  Alamofire
+import Alamofire
 import SwiftyJSON
 import Kingfisher
+import MJRefresh
 
 
 class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,MagicMasterDanmakudelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate

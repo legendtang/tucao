@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Kingfisher
 import SwiftyJSON
-
+import MJRefresh
 
 class HJChildListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
