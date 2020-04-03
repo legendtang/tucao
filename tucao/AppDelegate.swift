@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         KingfisherManager.shared.downloader.downloadTimeout=5       
         UINavigationBar.appearance().tintColor=UIColor.white
         UINavigationBar.appearance().backgroundColor=UIColor.blue
 //          UINavigationBar.appearance().ba navigationBar.barStyle = UIBarStyle.BlackOpaque;
-        KingfisherManager.shared.cache.maxMemoryCost=UInt(10*1024*1024)
-        KingfisherManager.shared.cache.maxDiskCacheSize=UInt(10*1024*1024)
+        KingfisherManager.shared.cache.memoryStorage.config.totalCostLimit=Int(10*1024*1024)
+        KingfisherManager.shared.cache.diskStorage.config.sizeLimit=UInt(10*1024*1024)
      
         let  userDefaults:UserDefaults = UserDefaults.standard
 

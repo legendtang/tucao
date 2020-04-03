@@ -40,12 +40,12 @@ class HJsetupTableViewController: UITableViewController {
     {
         switch indexPath.section {
         case 2:
-            let a:UIAlertController=UIAlertController.init(title: "清除缓存", message: "是否清除缓存？", preferredStyle: UIAlertControllerStyle.alert)
-            let b:UIAlertAction=UIAlertAction.init(title: "是", style: UIAlertActionStyle.default, handler: { [weak self] (UIAlertAction) in
+            let a:UIAlertController=UIAlertController.init(title: "清除缓存", message: "是否清除缓存？", preferredStyle: UIAlertController.Style.alert)
+            let b:UIAlertAction=UIAlertAction.init(title: "是", style: UIAlertAction.Style.default, handler: { [weak self] (UIAlertAction) in
                 KingfisherManager.shared.cache.clearDiskCache()
                 self?.Cachelable.text="0MB"
             })
-            let c:UIAlertAction=UIAlertAction.init(title: "否", style: UIAlertActionStyle.default, handler:nil)
+            let c:UIAlertAction=UIAlertAction.init(title: "否", style: UIAlertAction.Style.default, handler:nil)
             a.addAction(b)
             a.addAction(c)
             self.present(a, animated: true, completion: nil)

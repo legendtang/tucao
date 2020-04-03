@@ -133,7 +133,7 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             AdvertisementViewController=HJAdvertisementViewController()
             AdvertisementViewController?.view.frame=CGRect.init(x: 0, y: 0, width: (self.tableView.tableHeaderView?.frame.width)!, height:180)
             self.tableView.tableHeaderView?.addSubview((AdvertisementViewController?.view)!)
-            self.addChildViewController(AdvertisementViewController!)
+            self.addChild(AdvertisementViewController!)
             count=(ClassifyList?.count)!
         }
         
@@ -153,98 +153,95 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             var parameter:Dictionary<String, Any>?
             if classify == ViewControllerClassify.all
             {
-                url="http://www.tucao.tv/api_v2/rank.php"
+                url="http://www.tucao.one/api_v2/rank.php"
                 parameter = ["apikey":"25tids8f1ew1821ed","tid":(ClassifyList?.object(forKey: titleArray[i]) as? Int)!,"date":1] as [String : Any]
             }
             else
             {
                 let dic:NSDictionary = childClassifyList![i]
-                url="http://www.tucao.tv/api_v2/list.php"
+                url="http://www.tucao.one/api_v2/list.php"
                 parameter = ["apikey":"25tids8f1ew1821ed","tid":(dic.object(forKey: "id") as? Int)!,"page":1,"pagesize":10,"order":"views"] as [String : Any]
             }
-            AlamofireRequest=Alamofire.request(url, method: .get, parameters: parameter).responseJSON(completionHandler: { [weak self] response in
+            AlamofireRequest=AF.request(url, method: .get, parameters: parameter).responseJSON(completionHandler: { [weak self] response in
 //                 if self?.classify == ViewControllerClassify.all
 //                 {print(response.request?.url)}
-                switch response.result.isSuccess
+                switch response.result
                 {
-                case true:
-                    if let value = response.result.value
+                case .success(let value):
+                    let json = JSON(value)
+                    var modlelist:[HJVedioMessageModle]=[]
+                    if let dic = json["result"].dictionaryObject
                     {
-                        let json = JSON(value)
-                        var modlelist:[HJVedioMessageModle]=[]
-                        if let dic = json["result"].dictionaryObject
+                        let videoList = dic as NSDictionary?
+                        let keyArray = videoList?.allKeys as NSArray?
+                        for i in 0...(dic.count-1)
                         {
-                            let videoList = dic as NSDictionary?
-                            let keyArray = videoList?.allKeys as NSArray?
-                            for i in 0...(dic.count-1)
-                            {
-                                let modle:HJVedioMessageModle = HJVedioMessageModle()
-                                let dics:NSDictionary = videoList?.object(forKey: keyArray?[i] as Any) as! NSDictionary
-                                modle.play = dics.object(forKey: "play") as! NSString?
-                                modle.creat = dics.object(forKey: "creat") as! NSString?
-                                modle.descriptions = dics.object(forKey: "description") as! NSString?
-                                modle.mukio = dics.object(forKey: "mukio") as! NSString?
-                                modle.thumb = dics.object(forKey: "thumb") as! NSString?
-                                modle.title = dics.object(forKey: "title") as! NSString?
-                                modle.video = dics.object(forKey: "video") as! [NSDictionary]?
-                                modle.user = dics.object(forKey: "user") as! NSString?
-                                modle.hid=dics.object(forKey: "hid") as! NSString?
-                                modle.tid=dics.object(forKey: "typeid") as! NSString?
-                                modlelist.append(modle)
-                            }
-                            self?.allmodlelistdic?.addEntries(from: [i:modlelist,])
+                            let modle:HJVedioMessageModle = HJVedioMessageModle()
+                            let dics:NSDictionary = videoList?.object(forKey: keyArray?[i] as Any) as! NSDictionary
+                            modle.play = dics.object(forKey: "play") as! NSString?
+                            modle.creat = dics.object(forKey: "creat") as! NSString?
+                            modle.descriptions = dics.object(forKey: "description") as! NSString?
+                            modle.mukio = dics.object(forKey: "mukio") as! NSString?
+                            modle.thumb = dics.object(forKey: "thumb") as! NSString?
+                            modle.title = dics.object(forKey: "title") as! NSString?
+                            modle.video = dics.object(forKey: "video") as! [NSDictionary]?
+                            modle.user = dics.object(forKey: "user") as! NSString?
+                            modle.hid=dics.object(forKey: "hid") as! NSString?
+                            modle.tid=dics.object(forKey: "typeid") as! NSString?
+                            modlelist.append(modle)
                         }
-                        else if let dic = json["result"].arrayObject
-                        {
-                            let videoListArray = dic as NSArray?
-                            for i in 0...(dic.count-1)
-                            {
-                                let modle:HJVedioMessageModle = HJVedioMessageModle()
-                                let dics:NSDictionary = videoListArray![i] as! NSDictionary
-                                modle.play = dics.object(forKey: "play") as! NSString?
-                                modle.creat = dics.object(forKey: "creat") as! NSString?
-                                modle.descriptions = dics.object(forKey: "description") as! NSString?
-                                modle.mukio = dics.object(forKey: "mukio") as! NSString?
-                                modle.thumb = dics.object(forKey: "thumb") as! NSString?
-                                modle.title = dics.object(forKey: "title") as! NSString?
-                                modle.video = dics.object(forKey: "video") as! [NSDictionary]?
-                                modle.user = dics.object(forKey: "user") as! NSString?
-                                modle.hid=dics.object(forKey: "hid") as! NSString?
-                                modle.tid=dics.object(forKey: "typeid") as! NSString?
-                                modlelist.append(modle)
-                            }
-                            self?.allmodlelistdic?.addEntries(from: [i:modlelist,])
-                        }
-                        if self?.classify == ViewControllerClassify.all
-                        {
-                            if  (self?.ClassifyList?.object(forKey:self?.titleArray[i] as Any) as! Int)  == 24
-                            {
-                                for i in 0...3
-                                {
-                                    let image:UIImageView=(self?.AdvertisementViewController?.imagearray![i])!
-                                    image.isUserInteractionEnabled=true
-                                    let model:HJVedioMessageModle=modlelist[i]
-                                    let url:URL=URL.init(string: ((model.thumb)! as NSString) as String)!
-                                    let title = model.title as! String
-                                    self?.AdvertisementViewController?.titlearray![i]=title
-                                    image.kf.setImage(with: url)
-                                    var modellist:[HJVedioMessageModle]=(self?.AdvertisementViewController?.modellist)!
-                                    modellist.append(model)
-                                    self?.AdvertisementViewController?.modellist=modellist
-                                }
-                            }
-                            self?.tableView.reloadData()
-                        }
+                        self?.allmodlelistdic?.addEntries(from: [i:modlelist,])
                     }
-                case false:
-                    print("请求失败")
+                    else if let dic = json["result"].arrayObject
+                    {
+                        let videoListArray = dic as NSArray?
+                        for i in 0...(dic.count-1)
+                        {
+                            let modle:HJVedioMessageModle = HJVedioMessageModle()
+                            let dics:NSDictionary = videoListArray![i] as! NSDictionary
+                            modle.play = dics.object(forKey: "play") as! NSString?
+                            modle.creat = dics.object(forKey: "creat") as! NSString?
+                            modle.descriptions = dics.object(forKey: "description") as! NSString?
+                            modle.mukio = dics.object(forKey: "mukio") as! NSString?
+                            modle.thumb = dics.object(forKey: "thumb") as! NSString?
+                            modle.title = dics.object(forKey: "title") as! NSString?
+                            modle.video = dics.object(forKey: "video") as! [NSDictionary]?
+                            modle.user = dics.object(forKey: "user") as! NSString?
+                            modle.hid=dics.object(forKey: "hid") as! NSString?
+                            modle.tid=dics.object(forKey: "typeid") as! NSString?
+                            modlelist.append(modle)
+                        }
+                        self?.allmodlelistdic?.addEntries(from: [i:modlelist,])
+                    }
+                    if self?.classify == ViewControllerClassify.all
+                    {
+                        if  (self?.ClassifyList?.object(forKey:self?.titleArray[i] as Any) as! Int)  == 24
+                        {
+                            for i in 0...3
+                            {
+                                let image:UIImageView=(self?.AdvertisementViewController?.imagearray![i])!
+                                image.isUserInteractionEnabled=true
+                                let model:HJVedioMessageModle=modlelist[i]
+                                let url:URL=URL.init(string: ((model.thumb)! as NSString) as String)!
+                                let title = model.title! as String
+                                self?.AdvertisementViewController?.titlearray![i]=title
+                                image.kf.setImage(with: url)
+                                var modellist:[HJVedioMessageModle]=(self?.AdvertisementViewController?.modellist)!
+                                modellist.append(model)
+                                self?.AdvertisementViewController?.modellist=modellist
+                            }
+                        }
+                        self?.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print(error)
                 }
             })
         }
     }
     
     
-    func setClassifyIcon(index:Int,classify:ViewControllerClassify) -> Image
+    func setClassifyIcon(index:Int,classify:ViewControllerClassify) -> KFCrossPlatformImage
     {
         switch self.classify!
         {
@@ -252,17 +249,17 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             switch index
             {
             case 0:
-                return Image.init(named: "animation")!
+                return KFCrossPlatformImage.init(named: "animation")!
             case 1:
-                return Image.init(named: "newfan")!
+                return KFCrossPlatformImage.init(named: "newfan")!
             case 2:
-                 return Image.init(named: "music")!
+                 return KFCrossPlatformImage.init(named: "music")!
             case 3:
-                 return Image.init(named: "game")!
+                 return KFCrossPlatformImage.init(named: "game")!
             case 4:
-                 return Image.init(named: "television")!
+                 return KFCrossPlatformImage.init(named: "television")!
             case 5:
-                 return Image.init(named: "other")!
+                 return KFCrossPlatformImage.init(named: "other")!
             default:
                 break;
             }
@@ -272,13 +269,13 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             switch index
             {
             case 0:
-                return Image.init(named: "mad")!
+                return KFCrossPlatformImage.init(named: "mad")!
             case 1:
-                return Image.init(named: "mmd")!
+                return KFCrossPlatformImage.init(named: "mmd")!
             case 2:
-                return Image.init(named: "dub")!
+                return KFCrossPlatformImage.init(named: "dub")!
             case 3:
-                return Image.init(named: "other")!
+                return KFCrossPlatformImage.init(named: "other")!
             default:
                 break;
             }
@@ -289,13 +286,13 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             switch index
             {
             case 0:
-                return Image.init(named: "newfan")!
+                return KFCrossPlatformImage.init(named: "newfan")!
             case 1:
-                return Image.init(named: "chinese")!
+                return KFCrossPlatformImage.init(named: "chinese")!
             case 2:
-                return Image.init(named: "ova")!
+                return KFCrossPlatformImage.init(named: "ova")!
             case 3:
-                return Image.init(named: "finshed")!
+                return KFCrossPlatformImage.init(named: "finshed")!
             default:
                 break;
             }
@@ -306,19 +303,19 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             switch index
             {
             case 0:
-                return Image.init(named: "acgmusic")!
+                return KFCrossPlatformImage.init(named: "acgmusic")!
             case 1:
-                return Image.init(named: "sing")!
+                return KFCrossPlatformImage.init(named: "sing")!
             case 2:
-                return Image.init(named: "dance")!
+                return KFCrossPlatformImage.init(named: "dance")!
             case 3:
-                return Image.init(named: "vocaloid")!
+                return KFCrossPlatformImage.init(named: "vocaloid")!
             case 4:
-                return Image.init(named: "instrument")!
+                return KFCrossPlatformImage.init(named: "instrument")!
             case 5:
-                return Image.init(named: "music")!
+                return KFCrossPlatformImage.init(named: "music")!
             case 6:
-                return Image.init(named: "live")!
+                return KFCrossPlatformImage.init(named: "live")!
             default:
                 break;
             }
@@ -329,15 +326,15 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             switch index
             {
             case 0:
-                return Image.init(named: "gmv")!
+                return KFCrossPlatformImage.init(named: "gmv")!
             case 1:
-                return Image.init(named: "networkgame")!
+                return KFCrossPlatformImage.init(named: "networkgame")!
             case 2:
-                return Image.init(named: "sologame")!
+                return KFCrossPlatformImage.init(named: "sologame")!
             case 3:
-                return Image.init(named: "esports")!
+                return KFCrossPlatformImage.init(named: "esports")!
             case 4:
-                return Image.init(named: "gameboy")!
+                return KFCrossPlatformImage.init(named: "gameboy")!
             default:
                 break;
             }
@@ -348,13 +345,13 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             switch index
             {
             case 0:
-                return Image.init(named: "tv")!
+                return KFCrossPlatformImage.init(named: "tv")!
             case 1:
-                return Image.init(named: "film")!
+                return KFCrossPlatformImage.init(named: "film")!
             case 2:
-                return Image.init(named: "televisionamuse")!
+                return KFCrossPlatformImage.init(named: "televisionamuse")!
             case 3:
-                return Image.init(named: "finshed")!
+                return KFCrossPlatformImage.init(named: "finshed")!
             default:
                 break;
             }
@@ -365,23 +362,23 @@ class HJClassifyTableViewController: UITableViewController,UICollectionViewDeleg
             switch index
             {
             case 0:
-                return Image.init(named: "xiwenlejian")!
+                return KFCrossPlatformImage.init(named: "xiwenlejian")!
             case 1:
-                return Image.init(named: "otomad")!
+                return KFCrossPlatformImage.init(named: "otomad")!
             case 2:
-                return Image.init(named: "technology")!
+                return KFCrossPlatformImage.init(named: "technology")!
             case 3:
-                return Image.init(named: "sports")!
+                return KFCrossPlatformImage.init(named: "sports")!
             case 4:
-                return Image.init(named: "military")!
+                return KFCrossPlatformImage.init(named: "military")!
             case 5:
-                return Image.init(named: "pet")!
+                return KFCrossPlatformImage.init(named: "pet")!
             default:
                 break;
             }
             break;
         }
-        return Image.init()
+        return KFCrossPlatformImage.init()
     }
     
     

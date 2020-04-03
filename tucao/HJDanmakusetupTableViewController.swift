@@ -77,12 +77,12 @@ class HJDanmakusetupTableViewController: UITableViewController {
             transparentLable.text="100%"
         }
         
-        countSlider.addTarget(self, action: #selector(self.countChanged), for: UIControlEvents.valueChanged)
-        speedSlider.addTarget(self, action: #selector(self.speedChanged), for: UIControlEvents.valueChanged)
-        transparentSlider.addTarget(self, action: #selector(self.transparentChanged), for: UIControlEvents.valueChanged)
+        countSlider.addTarget(self, action: #selector(self.countChanged), for: UIControl.Event.valueChanged)
+        speedSlider.addTarget(self, action: #selector(self.speedChanged), for: UIControl.Event.valueChanged)
+        transparentSlider.addTarget(self, action: #selector(self.transparentChanged), for: UIControl.Event.valueChanged)
     }
     
-    func countChanged()
+    @objc func countChanged()
     {
         if countSlider.value == 80
         {
@@ -94,14 +94,14 @@ class HJDanmakusetupTableViewController: UITableViewController {
         }
     }
     
-    func speedChanged()
+    @objc func speedChanged()
     {
         let r:String=String.init(format: "%.1f", speedSlider.value)
         //            speedLable.text="\(%2f,b!)秒"
         speedLable.text="\(r)秒"
     }
     
-    func transparentChanged()
+    @objc func transparentChanged()
     {
         transparentLable.text="\(Int(transparentSlider.value*100))%"
     }

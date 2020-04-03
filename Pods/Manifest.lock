@@ -1,15 +1,17 @@
 PODS:
-  - Alamofire (4.2.0)
-  - ijkplayer (1.1.3)
-  - Kingfisher (3.2.2)
-  - KYDrawerController (2.0.1)
+  - Alamofire (5.0.5)
+  - IJKPlayerWithSSL (1.3.0)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
+  - KYDrawerController (2.1.0)
   - MagicMasterDanmaku (0.0.1)
-  - MJRefresh (3.1.16)
-  - SwiftyJSON (3.1.3)
+  - MJRefresh (3.3.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - ijkplayer
+  - IJKPlayerWithSSL
   - Kingfisher
   - KYDrawerController
   - MagicMasterDanmaku
@@ -19,7 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
-    - ijkplayer
+    - IJKPlayerWithSSL
     - Kingfisher
     - KYDrawerController
     - MagicMasterDanmaku
@@ -27,14 +29,14 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  ijkplayer: 1a1a33f5b0387bd7ea297337853130b9ddb20093
-  Kingfisher: 821466474ad7ffc375a4aecadfa05068cfed67b3
-  KYDrawerController: b716cfa5730dc2133a67efcfc28b3b5a2cff6101
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  IJKPlayerWithSSL: f94c087acc95c54917150ab386ab419398e50d71
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  KYDrawerController: baad0e63b09c0cb564bd48f0f7f70f45d9176ebc
   MagicMasterDanmaku: 413ea8e4098a33d321a109b34aa2dd725b695cb4
-  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
-  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 45109a974af4877afb88adf57163c29c25ce0a48
+PODFILE CHECKSUM: 2986d87326f7650e223d817b1b428678826ba1f5
 
 COCOAPODS: 1.9.1

@@ -57,7 +57,7 @@ class HJAdvertisementViewController: UIViewController,UIScrollViewDelegate
         // Do any additional setup after loading the view.
     }
     
-    func cutPage()
+    @objc func cutPage()
     {
         if scrollView.contentOffset.x != scrollView.frame.width*3
         {
@@ -80,7 +80,7 @@ class HJAdvertisementViewController: UIViewController,UIScrollViewDelegate
         }
     }
     
-    func touchImageAction(sender:Any)
+    @objc func touchImageAction(sender:Any)
     {
         let s:UITapGestureRecognizer=sender as! UITapGestureRecognizer
         if  s.view!.tag < modellist!.count

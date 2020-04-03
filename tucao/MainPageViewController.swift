@@ -50,7 +50,7 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
         self.navigationController?.navigationBar.backgroundColor=UIColor.blue
         self.navigationController?.navigationBar.barStyle=UIBarStyle.black
 //        let ii:UIImage=UIImage.init()
-        let negativeSpacer:UIBarButtonItem=UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
+        let negativeSpacer:UIBarButtonItem=UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.fixedSpace, target: nil, action: nil)
         negativeSpacer.width = -9
         self.navigationItem.leftBarButtonItems?.insert(negativeSpacer, at: 0)
         openDrawButton.layer.cornerRadius=openDrawButton.frame.width/2
@@ -71,14 +71,14 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
         {
             let button =  UIButton.init(frame: CGRect.init(x: i*Int(titleButtonWidth), y: 0, width: Int(titleButtonWidth), height: Int(titleScrollView.frame.size.height)))
             button.tag=i
-            button.setTitle(titleArray[i], for: UIControlState.normal)
-            button.setTitleColor(UIColor.black, for: UIControlState.normal)
-            button.addTarget(self, action: #selector(self.touchTitleButtonAction(sender:)), for: UIControlEvents.touchUpInside)
+            button.setTitle(titleArray[i], for: UIControl.State.normal)
+            button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            button.addTarget(self, action: #selector(self.touchTitleButtonAction(sender:)), for: UIControl.Event.touchUpInside)
             titleButtonArray?.append(button)
             titleScrollView.addSubview(button)
         }
         beSelectedButton=titleButtonArray?[0]
-        beSelectedButton?.setTitleColor(UIColor.blue, for: UIControlState.normal)
+        beSelectedButton?.setTitleColor(UIColor.blue, for: UIControl.State.normal)
         mainScrollView.contentSize=CGSize.init(width: UIScreen.main.bounds.size.width*7, height:0)
         
         let mainsb=UIStoryboard.init(name: "Main", bundle: nil)
@@ -116,7 +116,7 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
         {
             let VC:HJClassifyTableViewController = VCArray![i]
             VC.view.frame=CGRect.init(x: Int(UIScreen.main.bounds.size.width)*i, y: 0, width: Int(self.mainScrollView.frame.size.width), height: Int(self.mainScrollView.frame.size.height))
-            self.addChildViewController(VC)
+            self.addChild(VC)
             mainScrollView.addSubview(VC.view)
         }
     }
@@ -156,7 +156,7 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
         }
     }
     
-    func touchTitleButtonAction(sender:UIButton)
+    @objc func touchTitleButtonAction(sender:UIButton)
     {
         let tag=CGFloat(sender.tag)
         mainScrollView.setContentOffset(CGPoint.init(x: mainScrollView.frame.size.width*tag, y: 0), animated: true)
@@ -165,9 +165,9 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate
     
     func changeBeSelectedButton(page:Int)
     {
-        beSelectedButton?.setTitleColor(UIColor.black, for: UIControlState.normal)
+        beSelectedButton?.setTitleColor(UIColor.black, for: UIControl.State.normal)
         beSelectedButton = titleButtonArray?[page]
-        beSelectedButton?.setTitleColor(UIColor.blue, for: UIControlState.normal)
+        beSelectedButton?.setTitleColor(UIColor.blue, for: UIControl.State.normal)
     }
     
     

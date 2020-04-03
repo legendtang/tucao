@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import AVFoundation
-import IJKMediaFramework
+import IJKMediaFrameworkWithSSL
 
 
 
@@ -47,7 +47,7 @@ class ViewController: UIViewController,XMLParserDelegate
 //
 //        ijkplayer?.prepareToPlay()
 //        ijkplayer?.play()
-//       Alamofire.request("http://www.tucao.tv/index.php?m=mukio&c=index&a=init&playerID=11-4068648-1-0&r=456", method:.get).responseData
+//       Alamofire.request("http://www.tucao.one/index.php?m=mukio&c=index&a=init&playerID=11-4068648-1-0&r=456", method:.get).responseData
 //        { [weak self] response in
 //            self?.parser=XMLParser.init(data:response.result.value!)
 //            //解析字符串格式的XML数据
@@ -56,7 +56,7 @@ class ViewController: UIViewController,XMLParserDelegate
 //            //开始解析
 //            self?.parser?.parse()
 //        }
-        parser=XMLParser.init(contentsOf: URL.init(string: "http://www.tucao.tv/index.php?m=mukio&c=index&a=init&playerID=11-4068648-1-0&r=456")!)
+        parser=XMLParser.init(contentsOf: URL.init(string: "http://www.tucao.one/index.php?m=mukio&c=index&a=init&playerID=11-4068648-1-0&r=456")!)
         //解析字符串格式的XML数据
         //委托
         parser?.delegate = self
@@ -75,7 +75,7 @@ class ViewController: UIViewController,XMLParserDelegate
     {
         let str:String! = string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         if str != ""{
-            print(str)
+            print(str!)
         }
     }
 

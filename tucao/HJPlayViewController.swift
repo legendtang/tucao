@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import IJKMediaFramework
+import IJKMediaFrameworkWithSSL
 import MagicMasterDanmaku
 import Alamofire
 import SwiftyJSON
@@ -108,11 +108,11 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         }
         if (ijkplayer?.isPlaying()==true)
         {
-            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControl.State.normal)
         }
         else
         {
-            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControl.State.normal)
         }
         
         if Danmaku != nil
@@ -145,15 +145,16 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         commentDataList=[]
         loadMessage=UILabel.init()
         let dic:NSDictionary=videolist![0]
-        ActivityIndicatorView =  UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        if dic.object(forKey: "vid") == nil
+        ActivityIndicatorView =  UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.gray)
+        print(dic)
+        if dic.object(forKey: "vid") == nil && dic.object(forKey: "file") == nil
         {
             _ =  self.navigationController?.popViewController(animated: true)
             return
         }
         commentTableView.mj_footer=MJRefreshAutoNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(self.getComment))
         commentTableView.estimatedRowHeight=100
-        commentTableView.rowHeight = UITableViewAutomaticDimension
+        commentTableView.rowHeight = UITableView.automaticDimension
         self.title=playTitle
         NotificationCenter.default.addObserver(self, selector: #selector(self.setDanmakuStart), name:  NSNotification.Name.init(rawValue: "setDanmakuStart"), object: nil)
         
@@ -165,8 +166,12 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.IJKMPMoviePlayerPlaybackDidFinish), name:  NSNotification.Name.init(rawValue: "IJKMPMoviePlayerPlaybackDidFinishNotification"), object: nil)
         
-        print(dic);
-        setURL(vid: dic.object(forKey: "vid") as! String)
+        if dic.object(forKey: "file") != nil
+        {
+            videoURL = URL(string: dic["file"] as! String)
+        } else {
+            setURL(vid: dic.object(forKey: "vid") as! String)
+        }
         playLable.text="播放:"+play!
         userlable.text="up:"+user!
         mukioLable.text="弹幕:"+mukio!
@@ -193,8 +198,8 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         cacheSlider.isHidden=true
         timeLable.isHidden=true
         fullButton.isHidden=true
-        playSlider.addTarget(self, action: #selector(self.startChangePlayTime), for: UIControlEvents.touchDragInside)
-        playSlider.addTarget(self, action: #selector(self.endChangePlayTime), for: UIControlEvents.touchUpInside)
+        playSlider.addTarget(self, action: #selector(self.startChangePlayTime), for: UIControl.Event.touchDragInside)
+        playSlider.addTarget(self, action: #selector(self.endChangePlayTime), for: UIControl.Event.touchUpInside)
         toolbarHeight.constant=0
         let a:UIImageView=UIImageView.init(frame:CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height:playView.frame.size.height))
         let imageurl=URL.init(string: thumb!)
@@ -240,13 +245,13 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         }
     }
     
-    func setDanmakuStart()
+    @objc func setDanmakuStart()
     {
 
     }
 
     
-    func IJKMPMoviePlayerPlaybackDidFinish()
+    @objc func IJKMPMoviePlayerPlaybackDidFinish()
     {
         if ijkplayer?.bufferingProgress == 0
         {
@@ -255,54 +260,51 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         }
         else
         {
-            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControl.State.normal)
         }
     }
     
-    func getComment()
+    @objc func getComment()
     {
         let parameter = ["tid":tid!,"page":commentPage!,"id":hid!] as [String : Any]
-        AlamofireCommentRequest=Alamofire.request("https://www.biliplus.com/tucao/review.php", method: .get, parameters: parameter).responseJSON(completionHandler:
+        AlamofireCommentRequest=AF.request("https://www.biliplus.com/tucao/review.php", method: .get, parameters: parameter).responseJSON(completionHandler:
             {[weak self]  response in
-                switch response.result.isSuccess
+                switch response.result
                 {
-                case true:
-                    if let value = response.result.value
+                case .success(let value):
+                    let json = JSON(value)
+                    if let array = json["data"].arrayObject
                     {
-                        let json = JSON(value)
-                        if let array = json["data"].arrayObject
+                        if array.count>0
                         {
-                            if array.count>0
+                            for i in 0...array.count-1
                             {
-                                for i in 0...array.count-1
-                                {
-                                    let model:HJCommentModel = HJCommentModel()
-                                    let dic:NSDictionary = array[i] as! NSDictionary
-                                    model.avatar=dic.object(forKey: "face") as! String!
-                                    model.comment=dic.object(forKey: "content") as! String!
-                                    model.username=dic.object(forKey: "uname") as! String!
-                                    self?.commentDataList?.append(model)
-                                }
-                                self?.commentPage=(self?.commentPage)!+1
-                                self?.commentTableView.reloadData()
-                                self?.commentTableView.mj_footer.endRefreshing()
+                                let model:HJCommentModel = HJCommentModel()
+                                let dic:NSDictionary = array[i] as! NSDictionary
+                                model.avatar=dic.object(forKey: "face") as! String?
+                                model.comment=dic.object(forKey: "content") as! String?
+                                model.username=dic.object(forKey: "uname") as! String?
+                                self?.commentDataList?.append(model)
                             }
-                            else
-                            {
-                                 self?.commentTableView.mj_footer.endRefreshingWithNoMoreData()
-                            }
+                            self?.commentPage=(self?.commentPage)!+1
+                            self?.commentTableView.reloadData()
+                            self?.commentTableView.mj_footer?.endRefreshing()
+                        }
+                        else
+                        {
+                             self?.commentTableView.mj_footer?.endRefreshingWithNoMoreData()
                         }
                     }
                 
-                case false:
-                    self?.commentTableView.mj_footer.endRefreshing()
-                    print("请求失败")
+                case .failure(let error):
+                    self?.commentTableView.mj_footer?.endRefreshing()
+                    print(error)
                 }
         })
 
     }
     
-    func startChangePlayTime()
+    @objc func startChangePlayTime()
     {
         timer?.invalidate()
         timer=nil
@@ -311,7 +313,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
     }
     
     
-    func endChangePlayTime()
+    @objc func endChangePlayTime()
     {
         ijkplayer?.currentPlaybackTime=Double(playSlider.value)
         timer = Timer.scheduledTimer(timeInterval: 1,
@@ -334,7 +336,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         self.view.endEditing(true)
     }
     
-    func hiddenPlayTool()
+    @objc func hiddenPlayTool()
     {
         playButton.isHidden = !playButton.isHidden
         playToolBar.isHidden=playButton.isHidden
@@ -347,12 +349,12 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         {
             self.videoListCollectionViewHeight.constant=self.videoListCollectionView.contentSize.height
             self.scrollHeight.constant+=self.videoListCollectionView.contentSize.height
-            contractButton.setTitle("收起", for: UIControlState.normal)
+            contractButton.setTitle("收起", for: UIControl.State.normal)
         }
         else
         {
             self.videoListCollectionViewHeight.constant=30
-            contractButton.setTitle("展开", for: UIControlState.normal)
+            contractButton.setTitle("展开", for: UIControl.State.normal)
             self.scrollHeight.constant=700
         }
         self.view.setNeedsUpdateConstraints()
@@ -369,7 +371,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
             {
                 let imageview:UIImageView =  self.playView.subviews[0] as! UIImageView
                 imageview.image=UIImage.init(named: "loading")
-                let url:String="http://www.tucao.tv/index.php?m=mukio&c=index&a=init&playerID=11-\(hid! as String)-1-\(beSelectVideoIndex!)&r=253"
+                let url:String="http://www.tucao.one/index.php?m=mukio&c=index&a=init&playerID=11-\(hid! as String)-1-\(beSelectVideoIndex!)&r=253"
                 Danmaku=MagicMasterDanmaku.init(UrlString: url)
                 Danmaku?.delegate=self
                 Danmaku?.view.isHidden=isHiddenDanmaku!
@@ -394,7 +396,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
                 timeLable.isHidden=false
                 fullButton.isHidden=false
                 playToolBar.isHidden=playButton.isHidden
-                playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControlState.normal)
+                playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControl.State.normal)
                 playSlider.minimumValue=0
                 toolbarHeight.constant=36
                 Danmaku?.view.frame=CGRect.init(x: 0, y: 0, width: (playerView?.frame.size.width)!, height: (playerView?.frame.size.height)!)
@@ -405,7 +407,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
             if (ijkplayer?.isPlaying()==true)
             {
                 ijkplayer?.pause()
-                playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControlState.normal)
+                playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControl.State.normal)
                 Danmaku?.pause()
             }
             else
@@ -414,7 +416,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
                 //            {
                 //                ijkplayer?.currentPlaybackTime=0
                 //            }
-                playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControlState.normal)
+                playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControl.State.normal)
                 ijkplayer?.play()
                 playButton.isHidden = true
                 playToolBar.isHidden=playButton.isHidden
@@ -431,7 +433,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         }
     }
     
-    func finshedDanmaku(notification:Notification)
+    @objc func finshedDanmaku(notification:Notification)
     {
 //        var message:String=(loadMessage?.text)!
 //        message.append("弹幕加载完成\n")
@@ -439,7 +441,9 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
 //        loadMessage?.text=message
 //        loadMessage?.sizeToFit()
 //        loadMessage?.layoutIfNeeded()
-        ijkplayer?.prepareToPlay()
+        DispatchQueue.main.sync {
+            ijkplayer?.prepareToPlay()
+        }
     }
     
     
@@ -451,18 +455,20 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         {
             let message:String=danmakuTextField.text!
             danmakuTextField.text=""
-            let url:URL = URL.init(string: "http://www.tucao.tv/index.php?m=mukio&c=index&a=post&playerID=\(tid!)-\(hid!)-1-\(beSelectVideoIndex!)")!
+            let url:URL = URL.init(string: "http://www.tucao.one/index.php?m=mukio&c=index&a=post&playerID=\(tid!)-\(hid!)-1-\(beSelectVideoIndex!)")!
             let parameter = ["stime":ijkplayer!.currentPlaybackTime,"color":16777215,"mode":1,"cid":"\(tid!)-\(hid!)-1-\(beSelectVideoIndex!)","message":message,"size":25,"user":"test",] as [String : Any]
-            AlamofirefireDanmakuRequest=Alamofire.request(url, method: .post, parameters: parameter).responseString(completionHandler: {[weak self] response in
-                if response.result.value! == "ok"
-                {
-                    self?.Danmaku?.insetDanmaku(message:message)
+            AlamofirefireDanmakuRequest=AF.request(url, method: .post, parameters: parameter).responseString(completionHandler: {[weak self] response in
+                switch response.result {
+                    case .success:
+                        self?.Danmaku?.insetDanmaku(message:message)
+                    case .failure(let error):
+                        print(error)
                 }
             })
         }
     }
     
-    func changePlayMessage()
+    @objc func changePlayMessage()
     {
         if (ijkplayer != nil)
         {
@@ -476,7 +482,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         }
     }
     
-    func IJKMPMoviePlayerLoadStateDidChange()
+    @objc func IJKMPMoviePlayerLoadStateDidChange()
     {
         if (ijkplayer?.loadState.rawValue==4)
         {
@@ -554,7 +560,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
     
     func setURL(vid:String)
     {
-        videoURL=URL(string:"http://api.tucao.tv/api/down/"+vid)
+        videoURL=URL(string:"http://api.tucao.one/api/down/"+vid)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
@@ -566,7 +572,12 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
             ijkplayer?.shutdown()
             ijkplayer=nil
             let dic:NSDictionary = videolist![indexPath.row]
-            setURL(vid: dic.object(forKey: "vid") as! String )
+            if dic.object(forKey: "file") != nil
+            {
+                videoURL = URL(string: dic["file"] as! String)
+            } else {
+                setURL(vid: dic.object(forKey: "vid") as! String)
+            }
             let options:IJKFFOptions = IJKFFOptions.byDefault()
             if isvideotoolbox == true
             {
@@ -588,7 +599,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
             timeLable.isHidden=false
             fullButton.isHidden=false
             playToolBar.isHidden=playButton.isHidden
-            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControl.State.normal)
             playSlider.minimumValue=0
             toolbarHeight.constant=36
             beSelectVideoIndex=indexPath.row
@@ -599,7 +610,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
                 playerView?.frame=CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height:playView.frame.size.height);
                 playerView?.addGestureRecognizer(tapOne!)
                 self.playView.insertSubview(playerView!, at: 1);
-                let url:String="http://www.tucao.tv/index.php?m=mukio&c=index&a=init&playerID=11-\(hid! as String)-1-\(beSelectVideoIndex!)&r=253"
+                let url:String="http://www.tucao.one/index.php?m=mukio&c=index&a=init&playerID=11-\(hid! as String)-1-\(beSelectVideoIndex!)&r=253"
                 Danmaku=MagicMasterDanmaku.init(UrlString: url)
                 Danmaku?.delegate=self
                 Danmaku?.view.isHidden=isHiddenDanmaku!
@@ -616,7 +627,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
                 }
                 Danmaku?.view.frame=CGRect.init(x: 0, y: 0, width: (playerView?.frame.size.width)!, height: (playerView?.frame.size.height)!)
                 ActivityIndicatorView=nil
-                ActivityIndicatorView =  UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+                ActivityIndicatorView =  UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.gray)
                 ActivityIndicatorView?.frame=CGRect.init(x: playView.frame.size.width/2-15, y: playView.frame.size.height/2-15, width: 30, height: 30)
                 ActivityIndicatorView?.hidesWhenStopped=true
                 ijkplayer?.view.addSubview(ActivityIndicatorView!)
@@ -631,7 +642,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
         }
     }
 
-    func IJKMPMoviePlayerPlaybackStateDidChange()
+    @objc func IJKMPMoviePlayerPlaybackStateDidChange()
     {
         if ijkplayer?.playbackState != IJKMPMoviePlaybackState.playing
         {
@@ -697,7 +708,7 @@ class HJPlayViewController: UIViewController,UICollectionViewDataSource,UICollec
             cell.avatar.kf.setImage(with: url)
         }
         return cell
-    }
+    }   
     
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath)

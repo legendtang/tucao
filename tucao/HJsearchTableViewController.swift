@@ -29,12 +29,12 @@ class HJsearchTableViewController: UITableViewController,UISearchBarDelegate
    
     override func viewDidLoad()
     {
-        SegmentedControl.addTarget(self, action: #selector(self.changesort), for: UIControlEvents.valueChanged)
+        SegmentedControl.addTarget(self, action: #selector(self.changesort), for: UIControl.Event.valueChanged)
         key=""
         modelList=[]
         super.viewDidLoad()
         self.tableView.mj_footer=MJRefreshAutoNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(self.getVideoList))
-        self.tableView.mj_footer.endRefreshingWithNoMoreData()
+        self.tableView.mj_footer?.endRefreshingWithNoMoreData()
     }
 
     override func didReceiveMemoryWarning()
@@ -42,17 +42,17 @@ class HJsearchTableViewController: UITableViewController,UISearchBarDelegate
         super.didReceiveMemoryWarning()
     }
     
-    func changesort()
+    @objc func changesort()
     {
         AlamofireRequest?.cancel()
         page=1
         modelList?.removeAll()
         tableView.reloadData()
-        tableView.mj_footer.beginRefreshing()
+        tableView.mj_footer?.beginRefreshing()
     }
 
     
-    func getVideoList()
+    @objc func getVideoList()
     {
         if key != ""{
             var order:String?
@@ -70,54 +70,52 @@ class HJsearchTableViewController: UITableViewController,UISearchBarDelegate
             default:
                 break
             }
-            let url:URL=URL.init(string: "http://www.tucao.tv/api_v2/search.php")!
+            let url:URL=URL.init(string: "http://www.tucao.one/api_v2/search.php")!
             let parameter = ["apikey":"25tids8f1ew1821ed","pagesize":10,"page":page!,"order":order!,"q":key!,] as [String : Any]
-            AlamofireRequest=Alamofire.request(url, method: .get, parameters: parameter).responseJSON(completionHandler: { [weak self] response in
-                switch response.result.isSuccess
+            AlamofireRequest=AF.request(url, method: .get, parameters: parameter).responseJSON(completionHandler: { [weak self] response in
+                switch response.result
                 {
-                case true:
-                    if let value = response.result.value
+                case .success(let value):
+                    let json = JSON(value)
+                    if let dic = json["result"].arrayObject
                     {
-                        let json = JSON(value)
-                        if let dic = json["result"].arrayObject
+                        let videoListArray = dic as NSArray?
+                        for i in 0...(dic.count-1)
                         {
-                            let videoListArray = dic as NSArray?
-                            for i in 0...(dic.count-1)
-                            {
-                                let modle:HJVedioMessageModle = HJVedioMessageModle()
-                                let dics:NSDictionary = videoListArray![i] as! NSDictionary
-                                modle.play = dics.object(forKey: "play") as! NSString?
-                                modle.creat = dics.object(forKey: "creat") as! NSString?
-                                modle.descriptions = dics.object(forKey: "description") as! NSString?
-                                modle.mukio = dics.object(forKey: "mukio") as! NSString?
-                                modle.thumb = dics.object(forKey: "thumb") as! NSString?
-                                modle.title = dics.object(forKey: "title") as! NSString?
-                                modle.video = dics.object(forKey: "video") as! [NSDictionary]?
-                                modle.user = dics.object(forKey: "user") as! NSString?
-                                modle.hid=dics.object(forKey: "hid") as! NSString?
-                                modle.tid=dics.object(forKey: "typeid") as! NSString?
-                                self?.modelList?.append(modle)
-                            }
-                            self?.page=(self?.page!)!+1
-                            self?.tableView.mj_footer.endRefreshing()
-                            self?.tableView.reloadData()
+                            let modle:HJVedioMessageModle = HJVedioMessageModle()
+                            let dics:NSDictionary = videoListArray![i] as! NSDictionary
+                            modle.play = dics.object(forKey: "play") as! NSString?
+                            modle.creat = dics.object(forKey: "creat") as! NSString?
+                            modle.descriptions = dics.object(forKey: "description") as! NSString?
+                            modle.mukio = dics.object(forKey: "mukio") as! NSString?
+                            modle.thumb = dics.object(forKey: "thumb") as! NSString?
+                            modle.title = dics.object(forKey: "title") as! NSString?
+                            modle.video = dics.object(forKey: "video") as! [NSDictionary]?
+                            modle.user = dics.object(forKey: "user") as! NSString?
+                            modle.hid=dics.object(forKey: "hid") as! NSString?
+                            modle.tid=dics.object(forKey: "typeid") as! NSString?
+                            self?.modelList?.append(modle)
                         }
-                        let count = json["total_count"].int
-                        if  count! <= 0
-                        {
-                            self?.tableView.mj_footer.endRefreshingWithNoMoreData()
-                        }
+                        self?.page=(self?.page!)!+1
+                        self?.tableView.mj_footer?.endRefreshing()
+                        self?.tableView.reloadData()
+                    }
+                    let count = json["total_count"].int
+                    if  count! <= 0
+                    {
+                        self?.tableView.mj_footer?.endRefreshingWithNoMoreData()
                     }
                     break
-                case false:
-                    self?.tableView.mj_footer.endRefreshingWithNoMoreData()
+                case .failure(let error):
+                    self?.tableView.mj_footer?.endRefreshingWithNoMoreData()
+                    print(error)
                     break
                 }
             })
         }
         else
         {
-            self.tableView.mj_footer.endRefreshingWithNoMoreData()
+            self.tableView.mj_footer?.endRefreshingWithNoMoreData()
         }
     }
     
@@ -135,7 +133,7 @@ class HJsearchTableViewController: UITableViewController,UISearchBarDelegate
         page=1
         self.view.endEditing(true)
         self.tableView.reloadData()
-        self.tableView.mj_footer.beginRefreshing()
+        self.tableView.mj_footer?.beginRefreshing()
     }
 
     // MARK: - Table view data source
@@ -151,12 +149,12 @@ class HJsearchTableViewController: UITableViewController,UISearchBarDelegate
     {
         let cell:HJsearchTableViewCell = tableView.dequeueReusableCell(withIdentifier: "videolistCell", for: indexPath) as! HJsearchTableViewCell
         let modle:HJVedioMessageModle = modelList![indexPath.row]
-        cell.paly.text=modle.play as String!
-        cell.danmakulable.text=modle.mukio as String!
-        let url:URL=URL.init(string: modle.thumb as! String)!
+        cell.paly.text=modle.play as String?
+        cell.danmakulable.text=modle.mukio as String?
+        let url:URL=URL.init(string: modle.thumb! as String)!
         cell.aimage.kf.setImage(with: url)
-        cell.videotitle.text=modle.title as String!
-        cell.user.text=modle.user as String!
+        cell.videotitle.text=modle.title as String?
+        cell.user.text=modle.user as String?
         return cell
     }
  

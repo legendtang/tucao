@@ -94,15 +94,15 @@ class HJChildListViewController: UIViewController,UITableViewDelegate,UITableVie
         }
         
         
-        classiftTableView.selectRow(at: IndexPath.init(row: startIndex!, section: 0), animated: false, scrollPosition: UITableViewScrollPosition.none)
+        classiftTableView.selectRow(at: IndexPath.init(row: startIndex!, section: 0), animated: false, scrollPosition: UITableView.ScrollPosition.none)
         beSelectIndex=startIndex
-        SegmentedControl.addTarget(self, action: #selector(self.changesort), for: UIControlEvents.valueChanged)
+        SegmentedControl.addTarget(self, action: #selector(self.changesort), for: UIControl.Event.valueChanged)
         let footer = MJRefreshAutoNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(self.getVedioList))
         VideoListTableView.mj_footer=footer
-        footer?.beginRefreshing()
+        footer.beginRefreshing()
     }
     
-    func changesort()
+    @objc func changesort()
     {
         AlamofireRequest?.cancel()
         for i in 0...(allmodlelist?.count)!-1
@@ -112,19 +112,19 @@ class HJChildListViewController: UIViewController,UITableViewDelegate,UITableVie
             pagelist?[i] = 2
         }
         self.VideoListTableView.reloadData()
-        VideoListTableView.mj_footer.beginRefreshing()
+        VideoListTableView.mj_footer?.beginRefreshing()
     }
     
     @IBAction func contractButtonAction(_ sender: Any)
     {
         if isContract==false
         {
-            contractButton.setTitle("展开", for: UIControlState.normal)
+            contractButton.setTitle("展开", for: UIControl.State.normal)
             classiftTableViewWIDTH.constant=0
         }
         else
         {
-              contractButton.setTitle("收起", for: UIControlState.normal)
+              contractButton.setTitle("收起", for: UIControl.State.normal)
             classiftTableViewWIDTH.constant=90
         }
         isContract = !isContract
@@ -138,7 +138,7 @@ class HJChildListViewController: UIViewController,UITableViewDelegate,UITableVie
     
     
     
-    func getVedioList()
+    @objc func getVedioList()
     {
         var order:String=""
         switch SegmentedControl.selectedSegmentIndex
@@ -156,48 +156,45 @@ class HJChildListViewController: UIViewController,UITableViewDelegate,UITableVie
             break
         }
         let parameter = ["apikey":"25tids8f1ew1821ed","tid":(idlist?[beSelectIndex!])! as Int,"page":(pagelist?[beSelectIndex!])! as Int,"pagesize":10,"order":order] as [String : Any]
-        AlamofireRequest=Alamofire.request("http://www.tucao.tv/api_v2/list.php", method: .get, parameters: parameter).responseJSON(completionHandler:{ [weak self]  response in
-            switch response.result.isSuccess
+        AlamofireRequest=AF.request("http://www.tucao.one/api_v2/list.php", method: .get, parameters: parameter).responseJSON(completionHandler:{ [weak self]  response in
+            switch response.result
             {
-            case true:
-                if let value = response.result.value
+            case .success(let value):
+                let json = JSON(value)
+                if let dic = json["result"].arrayObject
                 {
-                    let json = JSON(value)
-                    if let dic = json["result"].arrayObject
+                    self?.videoListArray = dic as NSArray?
+                    if (self?.allmodlelist != nil)
                     {
-                        self?.videoListArray = dic as NSArray?
-                        if (self?.allmodlelist != nil)
+                        var a:[HJVedioMessageModle]=self!.allmodlelist?[self!.beSelectIndex!] as! [HJVedioMessageModle]
+                        for i in 0...(dic.count-1)
                         {
-                            var a:[HJVedioMessageModle]=self!.allmodlelist?[self!.beSelectIndex!] as! [HJVedioMessageModle]
-                            for i in 0...(dic.count-1)
-                            {
-                                let modle:HJVedioMessageModle = HJVedioMessageModle()
-                                let dics:NSDictionary = self!.videoListArray![i] as! NSDictionary
-                                modle.play = dics.object(forKey: "play") as! NSString?
-                                modle.creat = dics.object(forKey: "creat") as! NSString?
-                                modle.descriptions = dics.object(forKey: "description") as! NSString?
-                                modle.mukio = dics.object(forKey: "mukio") as! NSString?
-                                modle.thumb = dics.object(forKey: "thumb") as! NSString?
-                                modle.title = dics.object(forKey: "title") as! NSString?
-                                modle.video = dics.object(forKey: "video") as! [NSDictionary]?
-                                modle.user = dics.object(forKey: "user") as! NSString?
-                                modle.hid=dics.object(forKey: "hid") as! NSString?
-                                modle.tid=dics.object(forKey: "typeid") as! NSString?
-                                a.append(modle)
-                            }
-                            self!.allmodlelist?[self!.beSelectIndex!] = a
-                            var b:Int=(self!.pagelist?[self!.beSelectIndex!])! as Int
-                            b=b+1
-                            self!.pagelist?[self!.beSelectIndex!]=b
-                            self?.VideoListTableView.reloadData()
-                            self?.VideoListTableView.mj_footer.endRefreshing()
-                            self?.classiftTableView.isUserInteractionEnabled=true
+                            let modle:HJVedioMessageModle = HJVedioMessageModle()
+                            let dics:NSDictionary = self!.videoListArray![i] as! NSDictionary
+                            modle.play = dics.object(forKey: "play") as! NSString?
+                            modle.creat = dics.object(forKey: "creat") as! NSString?
+                            modle.descriptions = dics.object(forKey: "description") as! NSString?
+                            modle.mukio = dics.object(forKey: "mukio") as! NSString?
+                            modle.thumb = dics.object(forKey: "thumb") as! NSString?
+                            modle.title = dics.object(forKey: "title") as! NSString?
+                            modle.video = dics.object(forKey: "video") as! [NSDictionary]?
+                            modle.user = dics.object(forKey: "user") as! NSString?
+                            modle.hid=dics.object(forKey: "hid") as! NSString?
+                            modle.tid=dics.object(forKey: "typeid") as! NSString?
+                            a.append(modle)
                         }
+                        self!.allmodlelist?[self!.beSelectIndex!] = a
+                        var b:Int=(self!.pagelist?[self!.beSelectIndex!])! as Int
+                        b=b+1
+                        self!.pagelist?[self!.beSelectIndex!]=b
+                        self?.VideoListTableView.reloadData()
+                        self?.VideoListTableView.mj_footer?.endRefreshing()
+                        self?.classiftTableView.isUserInteractionEnabled=true
                     }
                 }
-            case false:
-                self?.VideoListTableView.mj_footer.endRefreshing()
-                print("请求失败")
+            case .failure(let error):
+                self?.VideoListTableView.mj_footer?.endRefreshing()
+                print(error)
             }
         })
     }
@@ -265,7 +262,7 @@ class HJChildListViewController: UIViewController,UITableViewDelegate,UITableVie
                 cell.titlelable.numberOfLines=1
             }
 
-            var a:[HJVedioMessageModle]=self.allmodlelist?[self.beSelectIndex!] as! [HJVedioMessageModle]
+            let a:[HJVedioMessageModle]=self.allmodlelist?[self.beSelectIndex!] as! [HJVedioMessageModle]
             let modle:HJVedioMessageModle=a[indexPath.row]
             cell.play.text=modle.play as String?
             cell.titlelable.text=modle.title as String?
@@ -292,7 +289,7 @@ class HJChildListViewController: UIViewController,UITableViewDelegate,UITableVie
                 let a:[HJVedioMessageModle]=self.allmodlelist?[self.beSelectIndex!] as! [HJVedioMessageModle]
                 if a.count==0
                 {
-                    VideoListTableView.mj_footer.beginRefreshing()
+                    VideoListTableView.mj_footer?.beginRefreshing()
                 }
                 VideoListTableView.reloadData()
                 tableView.reloadData()
@@ -353,7 +350,7 @@ class HJChildListViewController: UIViewController,UITableViewDelegate,UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let vc:HJPlayViewController=segue.destination as! HJPlayViewController
-        var a:[HJVedioMessageModle]=self.allmodlelist?[self.beSelectIndex!] as! [HJVedioMessageModle]
+        let a:[HJVedioMessageModle]=self.allmodlelist?[self.beSelectIndex!] as! [HJVedioMessageModle]
         let modle:HJVedioMessageModle=a[selectvideorow!]
         vc.videolist=modle.video
         vc.playTitle=modle.title as String?

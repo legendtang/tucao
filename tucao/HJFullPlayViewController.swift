@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import IJKMediaFramework
+import IJKMediaFrameworkWithSSL
 import MagicMasterDanmaku
 import Alamofire
 
@@ -58,11 +58,11 @@ class HJFullPlayViewController: UIViewController
         changeTimeLable(playtime: countTime(time: TimeInterval(playSlider.value)))
         if (ijkplayer?.isPlaying()==true)
         {
-            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControl.State.normal)
         }
         else
         {
-            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControl.State.normal)
         }
         isHiddenDanmaku =  (Danmaku?.view.isHidden)!
         if Danmaku?.view.isHidden == true
@@ -82,14 +82,17 @@ class HJFullPlayViewController: UIViewController
         {
             let message:String=danmakuTextField.text!
             danmakuTextField.text=""
-            let url:URL = URL.init(string: "http://www.tucao.tv/index.php?m=mukio&c=index&a=post&playerID=\(tid!)-\(hid!)-1-\(beSelectVideoIndex!)")!
+            let url:URL = URL.init(string: "http://www.tucao.one/index.php?m=mukio&c=index&a=post&playerID=\(tid!)-\(hid!)-1-\(beSelectVideoIndex!)")!
             let parameter = ["stime":ijkplayer!.currentPlaybackTime,"color":16777215,"mode":1,"cid":"\(tid!)-\(hid!)-1-\(beSelectVideoIndex!)","message":message,"size":25,"user":"test",] as [String : Any]
-            AlamofireRequest=Alamofire.request(url, method: .post, parameters: parameter).responseString(completionHandler: {[weak self] response in
-                if response.result.value! == "ok"
-                {
-                    self?.Danmaku?.insetDanmaku(message:message)
+            AlamofireRequest=AF.request(url, method: .post, parameters: parameter).responseString(completionHandler: {[weak self] response in
+                switch response.result {
+                    case .success:
+                        self?.Danmaku?.insetDanmaku(message:message)
+                    case .failure(let error):
+                        print(error)
+                    }
                 }
-            })
+            )
         }
     }
 
@@ -99,12 +102,12 @@ class HJFullPlayViewController: UIViewController
         if (ijkplayer?.isPlaying()==true)
         {
             ijkplayer?.pause()
-            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "play"), for: UIControl.State.normal)
             Danmaku?.pause()
         }
         else
         {
-            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControlState.normal)
+            playButton.setBackgroundImage(UIImage.init(named: "pause"), for: UIControl.State.normal)
             ijkplayer?.play()
             Danmaku?.resume()
         }
@@ -138,10 +141,10 @@ class HJFullPlayViewController: UIViewController
         self.view.layoutIfNeeded()
         UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
         playSlider.maximumValue=Float((ijkplayer?.duration)!)
-        playSlider.addTarget(self, action: #selector(self.startChangePlayTime), for: UIControlEvents.touchUpInside)
-        playSlider.addTarget(self, action: #selector(self.endChangePlayTime), for: UIControlEvents.touchUpInside)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillAppear(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillDisappear(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        playSlider.addTarget(self, action: #selector(self.startChangePlayTime), for: UIControl.Event.touchUpInside)
+        playSlider.addTarget(self, action: #selector(self.endChangePlayTime), for: UIControl.Event.touchUpInside)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillAppear(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillDisappear(notification:)), name:UIResponder.keyboardWillHideNotification, object: nil)
         if Danmaku?.view.isHidden == true
         {
             hidenDanmakuButton.alpha=0.4
@@ -166,21 +169,21 @@ class HJFullPlayViewController: UIViewController
         }
     }
     
-    func keyboardWillAppear(notification: NSNotification)
+    @objc func keyboardWillAppear(notification: NSNotification)
     {
-        let keyboardinfo = notification.userInfo![UIKeyboardFrameBeginUserInfoKey]
+        let keyboardinfo = notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey]
         let keyboardheight:CGFloat = ((keyboardinfo as AnyObject).cgRectValue.size.height)
         bottombarbottom.constant=keyboardheight
         cancelButtonW.constant=46
     }
     
-    func keyboardWillDisappear(notification:NSNotification)
+    @objc func keyboardWillDisappear(notification:NSNotification)
     {
         bottombarbottom.constant=0
         cancelButtonW.constant=0
     }
     
-    func startChangePlayTime()
+    @objc func startChangePlayTime()
     {
         timer?.invalidate()
         timer=nil
@@ -189,7 +192,7 @@ class HJFullPlayViewController: UIViewController
     }
     
     
-    func endChangePlayTime()
+    @objc func endChangePlayTime()
     {
         ijkplayer?.currentPlaybackTime=Double(playSlider.value)
         timer = Timer.scheduledTimer(timeInterval: 1,
@@ -207,14 +210,14 @@ class HJFullPlayViewController: UIViewController
         view.endEditing(true)
     }
     
-    func changePlayMessage()
+    @objc func changePlayMessage()
     {
         cacheSlider.progress=Float((ijkplayer?.playableDuration)!/(ijkplayer?.duration)!)
         playSlider.value=Float((ijkplayer?.currentPlaybackTime)!)
         changeTimeLable(playtime: countTime(time:(ijkplayer?.currentPlaybackTime)!))
     }
     
-    func hiddenPlayTool()
+    @objc func hiddenPlayTool()
     {
         view.endEditing(true)
         bottomToolView.isHidden = !bottomToolView.isHidden

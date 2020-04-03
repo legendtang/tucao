@@ -32,13 +32,13 @@ class fullViewController: UIViewController {
         
         let s = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
         s.backgroundColor=UIColor.red;
-        s.addTarget(self, action:#selector(fullViewController.exit) , for: UIControlEvents.touchUpInside)
+        s.addTarget(self, action:#selector(fullViewController.exit) , for: UIControl.Event.touchUpInside)
         
         self.view.addSubview(s);
         
     }
 
-    func exit()
+    @objc func exit()
     {
         self.dismiss(animated: false, completion: nil)
     }

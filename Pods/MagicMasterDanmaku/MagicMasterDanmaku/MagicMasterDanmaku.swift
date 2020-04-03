@@ -93,15 +93,17 @@ public class MagicMasterDanmaku: UIViewController,CAAnimationDelegate
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(self.setUp(notification:)), name: NSNotification.Name.init(rawValue: "ParserXMLFinshed"), object: nil)
         timer=Timer.init(timeInterval: 1, target: self, selector: #selector(self.updateDanmaku),userInfo: nil,repeats: true)
-        RunLoop.main.add(timer!, forMode: RunLoopMode.defaultRunLoopMode)
+        RunLoop.main.add(timer!, forMode: RunLoop.Mode.default)
         danmakuTrackCount = Int(self.view.frame.height/21+2)
     }
     
     
-    func setUp(notification:Notification)
+    @objc func setUp(notification:Notification)
     {
-        self.view.clipsToBounds = true;
-        self.view.isUserInteractionEnabled=false
+        DispatchQueue.main.sync {
+            self.view.clipsToBounds = true;
+            self.view.isUserInteractionEnabled=false
+        }
         let result:String = notification.userInfo?["result"] as! String
         if result=="succeed"
         {
@@ -114,7 +116,7 @@ public class MagicMasterDanmaku: UIViewController,CAAnimationDelegate
         NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "setDanmakuFinshed"), object: nil,userInfo:["result":result,])
     }
     
-    func updateDanmaku()
+    @objc func updateDanmaku()
     {
         if ispause==false && _isFire == true
         {
@@ -224,7 +226,7 @@ public class MagicMasterDanmaku: UIViewController,CAAnimationDelegate
         anim.fromValue=NSValue.init(cgPoint: CGPoint.init(x: UIScreen.main.bounds.width+(Danmaku.frame.width/2), y: CGFloat(height)+(Danmaku.frame.height/2)))
         anim.toValue=NSValue.init(cgPoint: CGPoint.init(x: -Danmaku.frame.size.width-5, y: CGFloat(height)+(Danmaku.frame.height/2)))
         anim.duration = danmakuSpeed!;
-        anim.fillMode=kCAFillModeForwards;
+        anim.fillMode=CAMediaTimingFillMode.forwards;
         anim.delegate=self
         Danmaku.layer.add(anim, forKey: "position")
     }

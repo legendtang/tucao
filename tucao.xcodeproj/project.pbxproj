@@ -89,13 +89,10 @@
 		395F8AD71DCD70E1005703D9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8AD41DCD70E1005703D9 /* CoreMedia.framework */; };
 		395F8AD81DCD70E1005703D9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8AD51DCD70E1005703D9 /* CoreVideo.framework */; };
 		395F8ADB1DCD7101005703D9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8AD91DCD7101005703D9 /* MediaPlayer.framework */; };
-		395F8ADC1DCD7101005703D9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8ADA1DCD7101005703D9 /* MobileCoreServices.framework */; };
 		395F8ADE1DCD7109005703D9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8ADD1DCD7109005703D9 /* OpenGLES.framework */; };
 		395F8AE01DCD7113005703D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8ADF1DCD7113005703D9 /* QuartzCore.framework */; };
 		395F8AE21DCD711A005703D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8AE11DCD711A005703D9 /* UIKit.framework */; };
 		395F8AE41DCD7124005703D9 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395F8AE31DCD7124005703D9 /* VideoToolbox.framework */; };
-		396D3A9F1F2F7B6C00B3A4FC /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3983CE4D1F2F739900E66DEA /* IJKMediaFramework.framework */; };
-		396D3AA11F2F7B7000B3A4FC /* IJKMediaFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3983CE4D1F2F739900E66DEA /* IJKMediaFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		397DDDB71DE52D5C00E0EC3A /* setup.png in Resources */ = {isa = PBXBuildFile; fileRef = 397DDDB61DE52D5C00E0EC3A /* setup.png */; };
 		397DDDB91DE52DE500E0EC3A /* usericon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 397DDDB81DE52DE500E0EC3A /* usericon.jpg */; };
 		397E45071DFFB6E000E12F36 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 397E45061DFFB6E000E12F36 /* icon.png */; };
@@ -127,6 +124,14 @@
 		39F9E8EE1DE4885900E3E259 /* danmakuW.png in Resources */ = {isa = PBXBuildFile; fileRef = 39F9E8ED1DE4885900E3E259 /* danmakuW.png */; };
 		39F9E90B1DE494C700E3E259 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 39F9E90A1DE494C700E3E259 /* back.png */; };
 		39FA44FC1DDB040B0063FE54 /* HJNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA44FB1DDB040B0063FE54 /* HJNavigationViewController.swift */; };
+		4718181E24310FB0006C1B55 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BF3512242DC8D700E4C0B7 /* Alamofire.framework */; };
+		4718182024310FB6006C1B55 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BF3514242DC8D700E4C0B7 /* Kingfisher.framework */; };
+		4718182224310FBA006C1B55 /* KYDrawerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BF3516242DC8D700E4C0B7 /* KYDrawerController.framework */; };
+		4718182424310FBC006C1B55 /* MagicMasterDanmaku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BF3518242DC8D700E4C0B7 /* MagicMasterDanmaku.framework */; };
+		4718182624310FC0006C1B55 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473FBBAD2430EBF2006949D7 /* MJRefresh.framework */; };
+		4718182824310FC7006C1B55 /* Pods_tucao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BF351A242DC8D700E4C0B7 /* Pods_tucao.framework */; };
+		4718182A24310FCB006C1B55 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BF351C242DC8D700E4C0B7 /* SwiftyJSON.framework */; };
+		4787B5A92437DB450040EB6E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4787B5A82437DB450040EB6E /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,13 +162,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = E654EA941B6B27E600B0F2D0;
 			remoteInfo = IJKMediaFrameworkTests;
-		};
-		396D3AA21F2F7B7000B3A4FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3983CE471F2F739900E66DEA /* IJKMediaPlayer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E654EA891B6B27E600B0F2D0;
-			remoteInfo = IJKMediaFramework;
 		};
 		3983CE4C1F2F739900E66DEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -231,13 +229,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		396D3A9E1F2F7B0F00B3A4FC /* Embed Frameworks */ = {
+		4718184F24312558006C1B55 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				396D3AA11F2F7B7000B3A4FC /* IJKMediaFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +354,6 @@
 		395F8AD41DCD70E1005703D9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		395F8AD51DCD70E1005703D9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		395F8AD91DCD7101005703D9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		395F8ADA1DCD7101005703D9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		395F8ADD1DCD7109005703D9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		395F8ADF1DCD7113005703D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		395F8AE11DCD711A005703D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -393,7 +389,9 @@
 		39F9E8ED1DE4885900E3E259 /* danmakuW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = danmakuW.png; sourceTree = "<group>"; };
 		39F9E90A1DE494C700E3E259 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		39FA44FB1DDB040B0063FE54 /* HJNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNavigationViewController.swift; sourceTree = "<group>"; };
+		4787B5A82437DB450040EB6E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		47BF3508242DC8D700E4C0B7 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		47DF2A44243744B900EE6D07 /* tucao.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tucao.entitlements; sourceTree = "<group>"; };
 		9257F60D74478665F3937003 /* Pods-tucao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tucao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tucao/Pods-tucao.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0FFAAD4FF79D56ED0DE5E2 /* Pods-tucao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tucao.release.xcconfig"; path = "Pods/Target Support Files/Pods-tucao/Pods-tucao.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -403,21 +401,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396D3A9F1F2F7B6C00B3A4FC /* IJKMediaFramework.framework in Frameworks */,
 				395F8AE41DCD7124005703D9 /* VideoToolbox.framework in Frameworks */,
 				395F8AE21DCD711A005703D9 /* UIKit.framework in Frameworks */,
 				395F8AE01DCD7113005703D9 /* QuartzCore.framework in Frameworks */,
 				395F8ADE1DCD7109005703D9 /* OpenGLES.framework in Frameworks */,
+				4718182624310FC0006C1B55 /* MJRefresh.framework in Frameworks */,
+				4787B5A92437DB450040EB6E /* CoreServices.framework in Frameworks */,
+				4718182A24310FCB006C1B55 /* SwiftyJSON.framework in Frameworks */,
 				395F8ADB1DCD7101005703D9 /* MediaPlayer.framework in Frameworks */,
-				395F8ADC1DCD7101005703D9 /* MobileCoreServices.framework in Frameworks */,
+				4718182024310FB6006C1B55 /* Kingfisher.framework in Frameworks */,
+				4718182424310FBC006C1B55 /* MagicMasterDanmaku.framework in Frameworks */,
 				395F8AD61DCD70E1005703D9 /* CoreGraphics.framework in Frameworks */,
 				395F8AD71DCD70E1005703D9 /* CoreMedia.framework in Frameworks */,
 				395F8AD81DCD70E1005703D9 /* CoreVideo.framework in Frameworks */,
+				4718182224310FBA006C1B55 /* KYDrawerController.framework in Frameworks */,
 				395F8AD21DCD70C0005703D9 /* AVFoundation.framework in Frameworks */,
 				395F8AD01DCD70B7005703D9 /* AudioToolbox.framework in Frameworks */,
 				395F8ACE1DCD70AB005703D9 /* libbz2.tbd in Frameworks */,
+				4718182824310FC7006C1B55 /* Pods_tucao.framework in Frameworks */,
 				395F8ACC1DCD7098005703D9 /* libz.tbd in Frameworks */,
 				3983CE501F2F743200E66DEA /* Pods_tucao.framework in Frameworks */,
+				4718181E24310FB0006C1B55 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +693,7 @@
 		395F8A171DCCA515005703D9 /* tucao */ = {
 			isa = PBXGroup;
 			children = (
+				47DF2A44243744B900EE6D07 /* tucao.entitlements */,
 				395F8A1C1DCCA515005703D9 /* Main.storyboard */,
 				397DDDB31DE52AFC00E0EC3A /* drawView */,
 				395F8A841DCCC4BB005703D9 /* other */,
@@ -803,12 +808,12 @@
 		395F8ACA1DCD7098005703D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4787B5A82437DB450040EB6E /* CoreServices.framework */,
 				395F8AE31DCD7124005703D9 /* VideoToolbox.framework */,
 				395F8AE11DCD711A005703D9 /* UIKit.framework */,
 				395F8ADF1DCD7113005703D9 /* QuartzCore.framework */,
 				395F8ADD1DCD7109005703D9 /* OpenGLES.framework */,
 				395F8AD91DCD7101005703D9 /* MediaPlayer.framework */,
-				395F8ADA1DCD7101005703D9 /* MobileCoreServices.framework */,
 				395F8AD31DCD70E1005703D9 /* CoreGraphics.framework */,
 				395F8AD41DCD70E1005703D9 /* CoreMedia.framework */,
 				395F8AD51DCD70E1005703D9 /* CoreVideo.framework */,
@@ -1007,12 +1012,11 @@
 				395F8A121DCCA515005703D9 /* Frameworks */,
 				395F8A131DCCA515005703D9 /* Resources */,
 				C0D533558DB20D4FD9FBB045 /* [CP] Embed Pods Frameworks */,
-				396D3A9E1F2F7B0F00B3A4FC /* Embed Frameworks */,
+				4718184F24312558006C1B55 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				396D3AA31F2F7B7000B3A4FC /* PBXTargetDependency */,
 			);
 			name = tucao;
 			productName = tucao;
@@ -1063,22 +1067,25 @@
 			attributes = {
 				CLASSPREFIX = HJ;
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "辉仔";
 				TargetAttributes = {
 					395F8A141DCCA515005703D9 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 9975VG746Y;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 					};
 					395F8A281DCCA515005703D9 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 395F8A141DCCA515005703D9;
 					};
 					395F8A331DCCA515005703D9 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 9ZHS9H5Z29;
+						DevelopmentTeam = 9975VG746Y;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 395F8A141DCCA515005703D9;
 					};
@@ -1086,7 +1093,7 @@
 			};
 			buildConfigurationList = 395F8A101DCCA515005703D9 /* Build configuration list for PBXProject "tucao" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1300,12 +1307,13 @@
 		};
 		C0D533558DB20D4FD9FBB045 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-tucao/Pods-tucao-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/IJKPlayerWithSSL/IJKMediaFrameworkWithSSL.framework",
 				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -1315,13 +1323,14 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IJKMediaFrameworkWithSSL.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicMasterDanmaku.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tucao/Pods-tucao-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -1410,11 +1419,6 @@
 			isa = PBXTargetDependency;
 			target = 395F8A141DCCA515005703D9 /* tucao */;
 			targetProxy = 395F8A351DCCA515005703D9 /* PBXContainerItemProxy */;
-		};
-		396D3AA31F2F7B7000B3A4FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = IJKMediaFramework;
-			targetProxy = 396D3AA21F2F7B7000B3A4FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1565,13 +1569,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/ijkplayer",
+					"$(PROJECT_DIR)/Pods/FIJKPlayer",
+					"$(PROJECT_DIR)/Pods/ijkplayerssl",
 				);
 				INFOPLIST_FILE = tucao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -1580,8 +1587,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tucao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 arm64e armv7s";
 			};
 			name = Debug;
 		};
@@ -1591,13 +1602,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/ijkplayer",
+					"$(PROJECT_DIR)/Pods/FIJKPlayer",
+					"$(PROJECT_DIR)/Pods/ijkplayerssl",
 				);
 				INFOPLIST_FILE = tucao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -1606,8 +1620,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tucao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 arm64e armv7s";
 			};
 			name = Release;
 		};
@@ -1616,14 +1634,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = tucaoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.tucaoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tucao.app/tucao";
 			};
 			name = Debug;
@@ -1633,14 +1656,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = tucaoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.tucaoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tucao.app/tucao";
 			};
 			name = Release;
@@ -1649,12 +1677,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9ZHS9H5Z29;
+				DEVELOPMENT_TEAM = 9975VG746Y;
 				INFOPLIST_FILE = tucaoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.tucaoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = tucao;
 			};
 			name = Debug;
@@ -1663,12 +1692,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9ZHS9H5Z29;
+				DEVELOPMENT_TEAM = 9975VG746Y;
 				INFOPLIST_FILE = tucaoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.tucaoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = tucao;
 			};
 			name = Release;
